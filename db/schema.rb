@@ -10,10 +10,47 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_29_122931) do
+ActiveRecord::Schema.define(version: 2020_06_29_123650) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "item_tags", force: :cascade do |t|
+    t.bigint "item_id", null: false
+    t.bigint "tag_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["item_id"], name: "index_item_tags_on_item_id"
+    t.index ["tag_id"], name: "index_item_tags_on_tag_id"
+  end
+
+  create_table "items", force: :cascade do |t|
+    t.text "comment"
+    t.string "item_type", null: false
+    t.text "content"
+    t.float "lat"
+    t.float "long"
+    t.bigint "journey_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["journey_id"], name: "index_items_on_journey_id"
+  end
+
+  create_table "journeys", force: :cascade do |t|
+    t.string "title"
+    t.datetime "start_date"
+    t.datetime "end_date"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_journeys_on_user_id"
+  end
+
+  create_table "tags", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -27,4 +64,8 @@ ActiveRecord::Schema.define(version: 2020_06_29_122931) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "item_tags", "items"
+  add_foreign_key "item_tags", "tags"
+  add_foreign_key "items", "journeys"
+  add_foreign_key "journeys", "users"
 end
