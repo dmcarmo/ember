@@ -17,6 +17,7 @@ puts "Finished!"
 
 puts "Creating users..."
 heather = User.create!(email: "heather@email.com", password: "flosseveryday")
+sidd = User.create!(email: "sidd@email.com", password: "wantaduck?")
 
 puts "Finished!"
 
