@@ -3,18 +3,19 @@
     <div class="row">
      <div class="col-xs-12 col-sm-6">
       <div class="journeys-header-card" style="width: 100%;">
-        <h2><%= display @journey.title %></h2>
+        <h2><%= @journey.title %></h2>
       </div>
       <div class="card" style="width: 18rem;">
         <div class="card-body">
           <div class="card">
-            <p class="card-title"><%= display @journey.title %></p>
-            <p class="card-text"><%= display @journey.start_date %></p>
-            <p class="card-text"><%= display @journey.end_date %></p>
+            <p class="card-title"><%= @journey.title %></p>
+            <p class="card-text"><%= @journey.start_date %></p>
+            <p class="card-text"><%= @journey.end_date %></p>
             <a href="#" class="btn btn-primary">Go back</a>
           </div>
         </div>
       </div>
+     </div>
     </div>
   </div>
 </div>
