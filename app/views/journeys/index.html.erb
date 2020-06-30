@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="row">
+     <div class="col-xs-12 col-sm-6">
+        <h1>My journeys</h1>
+        <% @journeys.each do |journey| %>
+        <p><%= display journey.title %></p>
+        <p><%= display journey.start_date %></p>
+        <p><%= display journey.end_date %></p>
+        <% end %>
+    </div>
+  </div>
+</div>
