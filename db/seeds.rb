@@ -16,7 +16,7 @@ User.destroy_all
 puts "Finished!"
 
 puts "Creating users..."
-heather = User.create!(email: "heather@email.com", password: "flosseveryday")
+heather = User.create!(username: "heather", email: "heather@email.com", password: "flosseveryday")
 
 puts "Finished!"
 
