@@ -1,0 +1,12 @@
+<h1>List of items for this journey - replace this with the current journey name/title</h1>
+
+<% @items.each do |item| %>
+<div class= item-card>
+  <ul>
+    <li><%= item.type %></li>
+  </ul>
+  <ul>
+    <li><%= item.content %></li>
+  </ul>
+</div>
+<% end %>
