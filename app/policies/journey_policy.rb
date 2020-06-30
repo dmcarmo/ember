@@ -4,7 +4,20 @@ class JourneyPolicy < ApplicationPolicy
       scope.all
     end
   end
+
   def show?
     true
+  end
+
+  def new?
+    true
+  end
+
+  def create?
+    true
+  end
+
+  def destroy?
+    record.user == user
   end
 end
