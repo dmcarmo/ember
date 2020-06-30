@@ -1,12 +1,23 @@
 <div class="container">
-  <div class="row">
+  <div class="journeys-body">
+    <div class="row">
      <div class="col-xs-12 col-sm-6">
-        <h1>My journeys</h1>
+      <div class="journeys-header-card" style="width: 100%;">
+        <h2>My journeys</h2>
+      </div>
         <% @journeys.each do |journey| %>
-        <p><%= display journey.title %></p>
-        <p><%= display journey.start_date %></p>
-        <p><%= display journey.end_date %></p>
+          <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              <div class="card">
+                <p class="card-title"><%= display journey.title %></p>
+                <p class="card-text"><%= display journey.start_date %></p>
+                <p class="card-text"><%= display journey.end_date %></p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
         <% end %>
     </div>
   </div>
 </div>
+
