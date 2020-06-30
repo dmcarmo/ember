@@ -8,7 +8,7 @@
   position: relative;
   background-repeat: none;
   background-size: 100%;
-  height: 100vh;
+  min-height: calc(100vh - 69px);
 }
 
 .layer {
@@ -35,16 +35,25 @@
   background-color: rgba(30, 30, 30, 1);
   color: rgba(255, 255, 255, 0.4);
   margin: 15px;
+  border-radius: 5px;
 }
 
-h3 {
+h5 {
   margin-left: 20px;
   margin-top: 20px;
   margin-bottom: 5px;
-  padding: 10px;
-  color: white;
-  padding-top: 15px;
-}
+  padding-top: 10px;
+  color:  rgba(250, 250, 250, 0.7);
+  padding-left: 40px;
+  padding-bottom: 10px;
+  border-radius: 5px;
+  background-color: rgba(27, 27, 27, 1);
+  width: 150px;
+  position: relative;
+  top: 17px;
+  left: 200px;
+  box-shadow: inset 0 -7px 9px -7px rgba(0,0,0,0.8);
+ }
 
 .ibtn {
   background-color: #ad1d63;
@@ -54,8 +63,5 @@ h3 {
   color: rgba(30, 30, 30, 1);
 }
 
-.ibtn:hover {
-  background-color: none;
-  border-color: #ad1d63;
 
-}
+
