@@ -11,6 +11,8 @@ puts "Destroying items..."
 Item.destroy_all
 puts "Destroying journeys..."
 Journey.destroy_all
+puts "Destroying settings..."
+Setting.destroy_all
 puts "Destroying users..."
 User.destroy_all
 puts "Finished!"
@@ -18,6 +20,12 @@ puts "Finished!"
 puts "Creating users..."
 heather = User.create!(username: "heather", email: "heather@email.com", password: "flosseveryday")
 sidd = User.create!(username: "sidd", email: "sidd@email.com", password: "wantaduck?")
+
+puts "Finished!"
+
+puts "Creating settings..."
+settings_1 = Setting.create!(user: heather, location_enable: true)
+settings_2 = Setting.create!(user: sidd, location_enable: false)
 
 puts "Finished!"
 
