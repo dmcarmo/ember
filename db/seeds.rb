@@ -34,5 +34,3 @@ item_4 = Item.new(item_type: "note", content: "Why is this shop full of rubber d
 item_5 = Item.new(item_type: "note", content: "Learning to code is making my brain melt, please save me!!", commment: "", journey: journey_2 )    
 
 puts "Created #{Item.count} entries."
-
-Time.parse("Jun 30 2018 8:00"), end_date: Time.parse("Aug 8 2018 8:00") )
