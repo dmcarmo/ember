@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_30_015127) do
+ActiveRecord::Schema.define(version: 2020_06_30_120935) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -46,6 +46,12 @@ ActiveRecord::Schema.define(version: 2020_06_30_015127) do
     t.index ["user_id"], name: "index_journeys_on_user_id"
   end
 
+  create_table "settings", force: :cascade do |t|
+    t.boolean "location_enable", default: false
+    t.bigint "user_id", null: false
+    t.index ["user_id"], name: "index_settings_on_user_id"
+  end
+
   create_table "tags", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
@@ -68,4 +74,5 @@ ActiveRecord::Schema.define(version: 2020_06_30_015127) do
   add_foreign_key "item_tags", "tags"
   add_foreign_key "items", "journeys"
   add_foreign_key "journeys", "users"
+  add_foreign_key "settings", "users"
 end
