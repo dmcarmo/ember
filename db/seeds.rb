@@ -7,12 +7,12 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require "open-uri"
 
-puts "Destroying users..."
-User.destroy_all
-puts "Destroying journeys..."
-Journey.destroy_all
 puts "Destroying items..."
 Item.destroy_all
+puts "Destroying journeys..."
+Journey.destroy_all
+puts "Destroying users..."
+User.destroy_all
 puts "Finished!"
 
 puts "Creating users..."
