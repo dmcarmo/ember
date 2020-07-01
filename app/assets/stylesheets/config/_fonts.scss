@@ -14,3 +14,10 @@ $headers-font: "Nunito", "Helvetica", "sans-serif";
 //        font-url('FontFile.ttf') format('truetype')
 // }
 // $my-font: "Font Name";
+body {
+  background: url(https://wallpapers.party/media/2018/06/colourful-pink-1.jpg);
+  position: relative;
+  background-repeat: none;
+  background-size: 100%;
+  min-height: calc(100vh - 69px);
+}
