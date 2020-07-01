@@ -5,11 +5,13 @@
         <div class="col-12 col-sm-6">
           <h5>Journeys</h5>
             <% @journeys.each do |journey| %>
-              <div class="card-body">
-                <h3 class="card-title"><%= journey.title %></h3>
-                <p class="card-text"><%= journey.start_date %></p>
-                <p class="card-text"><%= journey.end_date %></p>
-                <%= link_to "See Journey", journey_path(journey) %>
+              <div class="card">
+                <div class="card-body">
+                  <h3 class="card-title"><%= journey.title %></h3>
+                  <p class="card-text"><%= journey.start_date %></p>
+                  <p class="card-text"><%= journey.end_date %></p>
+                  <%= link_to "See Journey", journey_path(journey) %>
+                </div>
               </div>
             </div>
 
