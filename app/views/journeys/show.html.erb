@@ -11,9 +11,19 @@
             <p class="card-title"><%= @journey.title %></p>
             <p class="card-text"><%= @journey.start_date %></p>
             <p class="card-text"><%= @journey.end_date %></p>
-            <a href="#" class="btn btn-primary">Go back</a>
+            <div class="btn btn-primary"><%= link_to "Go back", journeys_path %></div>
           </div>
         </div>
+      </div>
+      <div>
+        <% @journey.items.each do |item| %>
+          <%= link_to item_path(item) do %>
+            <div class="card card-body" style="width: 18rem;">
+              <p><%= item.type %></p>
+              <p>**Show only the type and a background image/color?**</p>
+            </div>
+          <% end %>
+        <% end %>
       </div>
      </div>
     </div>

@@ -10,7 +10,7 @@
                 <h4 class="card-title"><%= journey.title %></h4>
                 <p class="card-text"><%= journey.start_date %></p>
                 <p class="card-text"><%= journey.end_date %></p>
-                <a href="#" class="ibtn">See Journey</a>
+                <div class="ibtn"><%= link_to "See Journey", journey_path(journey) %></div>
               </div>
             </div>
 
