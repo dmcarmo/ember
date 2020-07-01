@@ -1,7 +1,7 @@
 class JourneyPolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
-      scope.all
+      scope.where(user: user).order(created_at: :desc)
     end
   end
 
@@ -19,5 +19,9 @@ class JourneyPolicy < ApplicationPolicy
 
   def destroy?
     record.user == user
+  end
+
+  def main?
+    user.present?
   end
 end

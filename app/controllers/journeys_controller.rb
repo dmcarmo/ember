@@ -22,6 +22,11 @@ class JourneysController < ApplicationController
     redirect_to action: "index"
   end
 
+  def main
+    @current_journey = policy_scope(Journey).last
+    authorize @current_journey
+  end
+
   private
 
   # def journey_params

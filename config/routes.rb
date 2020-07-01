@@ -11,6 +11,9 @@ Rails.application.routes.draw do
   end
 
   resources :journeys, only: [:index, :show, :new, :create, :destroy] do
+    collection do
+      get :main
+    end
     resources :items, only: [:index, :new, :create]
   end
 
