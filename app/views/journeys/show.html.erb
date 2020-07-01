@@ -1,31 +1,33 @@
 <div class="container">
-  <div class="journeys-body">
+  <h4><%= @journey.title %> <%= @journey.start_date %> <%= @journey.end_date %></h4>
     <div class="row">
-     <div class="col-xs-12 col-sm-6">
-      <div class="journeys-header-card" style="width: 100%;">
-        <h2><%= @journey.title %></h2>
-      </div>
-      <div class="card" style="width: 18rem;">
-        <div class="card-body">
-          <div class="card">
-            <p class="card-title"><%= @journey.title %></p>
-            <p class="card-text"><%= @journey.start_date %></p>
-            <p class="card-text"><%= @journey.end_date %></p>
-            <div class="btn btn-primary"><%= link_to "Go back", journeys_path %></div>
-          </div>
+      <div class="col-12 card-boarders">
+        <div class="card">
+            <img src="https://images.squarespace-cdn.com/content/v1/549d41a3e4b003c6ce131926/1498578184205-GH2MO014O7BTNXSE58QN/ke17ZwdGBToddI8pDm48kKo6K4nzwH4_qC3GsKGYQ297gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1UYIIs9GSzFoX1QQ48IpvjVfhKYOpCCKFxshznv23YZGJNKOigyfB8BfAL6B2Stgizg/image-asset.jpeg?format=1500w" style=" border-radius: 10px;width:100%; margin: auto;" alt="">
         </div>
       </div>
-      <div>
-        <% @journey.items.each do |item| %>
-          <%= link_to item_path(item) do %>
-            <div class="card card-body" style="width: 18rem;">
-              <p><%= item.type %></p>
-              <p>**Show only the type and a background image/color?**</p>
-            </div>
-          <% end %>
-        <% end %>
-      </div>
-     </div>
     </div>
+    <div class="row">
+      <div class="col-6 card-boarders">
+        <div class="card">
+            <img src="https://149359143.v2.pressablecdn.com/wp-content/uploads/2011/12/Aldaris.jpg" style=" border-radius: 10px; width:100%; margin: auto;" alt="">
+
+        </div>
+      </div>
+      <div class="col-6 card-boarders">
+        <div class="card">
+          <div class="card-body" style="height: 30vh;">
+            <%= @journey.items.sample.content %>
+          </div>
+        </div>
+         <br>
+         <br>
+      </div>
+    <div class="ibtn"><%= link_to "Go back", journeys_path %></div>
   </div>
-</div>
+   <br>
+   <br>
+ </div>
+
+
+

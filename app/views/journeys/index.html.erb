@@ -1,16 +1,15 @@
-<div class="container">
+
   <div class="journeys-body">
     <div class="layer">
       <div class="row">
         <div class="col-12 col-sm-6">
           <h5>Journeys</h5>
             <% @journeys.each do |journey| %>
-             <div class="card">
               <div class="card-body">
-                <h4 class="card-title"><%= journey.title %></h4>
+                <h3 class="card-title"><%= journey.title %></h3>
                 <p class="card-text"><%= journey.start_date %></p>
                 <p class="card-text"><%= journey.end_date %></p>
-                <div class="ibtn"><%= link_to "See Journey", journey_path(journey) %></div>
+                <%= link_to "See Journey", journey_path(journey) %>
               </div>
             </div>
 
