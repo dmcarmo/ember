@@ -19,5 +19,7 @@ body {
   position: relative;
   background-repeat: none;
   background-size: 100%;
-  min-height: calc(100vh - 69px);
+  min-height: 500px;
+  background-attachment: fixed;
+  background-size: cover;
 }
