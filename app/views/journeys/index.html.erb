@@ -2,10 +2,10 @@
   <div class="journeys-body">
     <div class="layer">
       <div class="row">
-        <div class="col-xs-12 col-sm-6">
-         <h3>My Journeys</h3>
+        <div class="col-12 col-sm-6">
+          <h5>Journeys</h5>
             <% @journeys.each do |journey| %>
-             <div class="card" style="width: 18rem;">
+             <div class="card">
               <div class="card-body">
                 <h4 class="card-title"><%= journey.title %></h4>
                 <p class="card-text"><%= journey.start_date %></p>
