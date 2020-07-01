@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   end
 
   resources :journeys, only: [:index, :show, :new, :create, :destroy] do
-    resources :items, only: [:index, :show, :new, :create, :destroy]
+    resources :items, only: [:index, :new, :create]
   end
+
+  resources :items, only: [:show, :edit, :update, :destroy]
 end
