@@ -13,6 +13,14 @@ class JourneysController < ApplicationController
   def new
     @journey = Journey.new
     authorize @journey
+    #form to give a title to journey
+    #the view should continue to update journey
+  end
+
+  def update
+    #create an item
+    #add item to current journey
+    #go back to main
   end
 
   def create
