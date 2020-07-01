@@ -24,10 +24,14 @@ class JourneysController < ApplicationController
   end
 
   def create
-    @journey = Journey.new(params[:journey])
+    # raise
+    title = params[:journey][:title]
+    user = current_user
+    start_date = DateTime.now
+    @journey = Journey.new(user: user, title: title, start_date: start_date)
     @journey.save
     authorize @journey
-    redirect_to action: "index"
+    redirect_to action: "main"
   end
 
   def main
