@@ -24,7 +24,6 @@ class JourneysController < ApplicationController
   end
 
   def create
-    # raise
     title = params[:journey][:title]
     user = current_user
     start_date = DateTime.now
