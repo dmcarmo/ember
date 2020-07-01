@@ -4,6 +4,9 @@
  <div class="choose_action">
   <li class="action">
     <%= link_to "Continue Journey", journey_path(@current_journey) %>
+    <%= link_to "" do %><i class="fas fa-camera" aria-hidden="true"></i><% end %>
+    <%= link_to "" do %><i class="fas fa-microphone" aria-hidden="true"></i><% end %>
+    <%= link_to "" do %><i class="fas fa-pencil-alt" aria-hidden="true"></i><% end %>
   </li>
   <li class="action">
     <%= link_to "Create New Journey", new_journey_path %>
@@ -12,3 +15,4 @@
     <%= link_to "Journey Albums", journeys_path %>
   </li>
 </div>
+
