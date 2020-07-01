@@ -1,7 +1,7 @@
-.navbar-lewagon {
+.navbar-ember {
   justify-content: space-between;
   background-color: rgba(30, 30, 30, 1);
-  height: 100px;
+  height: 80px;
   border-bottom-style: solid;
   border-bottom-width: 100%;
   border-bottom-style: 1px;
@@ -20,3 +20,40 @@
 .nav-link {
   text-color: rgba(255, 255, 255, 1);
 }
+
+
+ul {
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  padding: 30px;
+}
+
+li {
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  display: inline;
+  color: rgba(80, 80, 80, 0.5);
+}
+
+li:hover {
+  color: #ad1d63;
+}
+
+li:active {
+  color: #ad1d63;
+}
+
+a {
+  color: inherit;
+}
+
+a:hover {
+  color: inherit;
+}
+
+a:active {
+  color: inherit;
+}
+
