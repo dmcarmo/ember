@@ -14,10 +14,10 @@ class NotesController < ItemsController
     authorize @note
     redirect_to main_journeys_path, notice: "Note saved"
   end
-end
 
-private
-
-def note_params
-  params.require(:note).permit(:name, :comment, :content)
+  private
+  
+  def note_params
+    params.require(:note).permit(:name, :comment, :content)
+  end
 end

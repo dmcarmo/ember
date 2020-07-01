@@ -14,7 +14,8 @@ Rails.application.routes.draw do
     collection do
       get :main
     end
-    resources :items, :notes, only: [:index, :new, :create]
+    resources :items, only: [:index]
+    resources :notes, :pictures, :videos, :audios, only: [:index, :new, :create]
   end
 
   resources :items, only: [:show, :edit, :update, :destroy]
