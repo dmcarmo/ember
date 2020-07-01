@@ -1,11 +1,19 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <%= link_to "#", class: "navbar-brand" do %>
-    <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" %>
-  <% end %>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
+  <div class="navbar-ember">
+    <ul>
+      <li>
+        <%= link_to journeys_path do %>
+        <i class="far fa-image" style="font-size: 20px;"></i><% end %></li>
+      <li>
+        <%= link_to items_path do %><i class="fas fa-search"></i><% end %></li>
+      <li>
+        <%= link_to root_path do %><i class="fab fa-gripfire" style="font-size: 23px;"></i><% end %></li>
+      <li>
+        <%= link_to journeys_path do %><i class="fas fa-globe-europe"></i><% end %></li>
+      <li>
+        <%= link_to edit_settings_path do %><i class="fas fa-cog"></i><% end %></li>
+    </ul>
+  </div>
+</div>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
