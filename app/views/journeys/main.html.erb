@@ -1,18 +1,28 @@
-<h1>Ember</h1>
-
-
- <div class="choose_action">
-  <li class="action">
-    <%= link_to "Continue Journey", journey_path(@current_journey) %>
-    <%= link_to "" do %><i class="fas fa-camera" aria-hidden="true"></i><% end %>
-    <%= link_to "" do %><i class="fas fa-microphone" aria-hidden="true"></i><% end %>
-    <%= link_to "" do %><i class="fas fa-pencil-alt" aria-hidden="true"></i><% end %>
-  </li>
-  <li class="action">
-    <%= link_to "Create New Journey", new_journey_path %>
-  </li>
-    <li class="action">
-    <%= link_to "Journey Albums", journeys_path %>
-  </li>
+<div class="container main-background" style="background-color: none; ">
+  <div class="position">
+    <div class="row row-main">
+    <li class="action main-button">
+      <%= link_to "Create New Journey", new_journey_path %>
+    </li>
+  </div>
+   <br>
+   <br>
+  <div class="row row-main">
+    <div class="choose_action">
+      <li class="action main-button">
+        <%= link_to "Continue Journey", journey_path(@current_journey) %>
+      </li>
+    </div>
+  </div>
+  <br>
+  <br>
+  <div class="row row-main">
+    <li class="action main-button">
+      <%= link_to "Journey Albums", journeys_path %>
+    </li>
+  </div>
+  </div>
 </div>
+
+
 
