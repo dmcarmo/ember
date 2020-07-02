@@ -35,6 +35,7 @@ class JourneysController < ApplicationController
 
   def main
     @current_journey = policy_scope(Journey).last
+    @picture = Picture.new
     authorize @current_journey
   end
 
