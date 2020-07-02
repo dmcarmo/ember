@@ -1,7 +1,7 @@
 .main-button {
   background-color: rgba(30, 30, 30, 0.95);
   border-color: rgba(30, 30, 30, 0.95);
-  border-radius: 100px 100px 100px 100px;
+  border-radius: 10px 10px 0px 0px;
   display: flex;
   width: 220px;
   height: 60px;
@@ -11,6 +11,9 @@
   border-style: solid;
 }
 
+.round {
+  border-radius: 10px 10px 10px 10px;
+}
 .row-main {
   display: flex;
   justify-content: center;
@@ -24,16 +27,16 @@
 }
 
 .main-icons {
+  text-align: center;
   height: 45px;
   width: 45px;
+  display: inline;
   background-color: #ad1d63;
   border-radius: 50%;
-  display: flex;
-  justify-content: space-around;
+
   margin: 15px;
-  padding-top: 14px;
-  padding-left: 2px;
-  color: none;
+  padding-top: 10px;
+  color: rgba(30, 30, 30, 1);
   border-color: #850346;
   border-style: solid;
   border-width: 1px;
@@ -45,11 +48,32 @@
 
 .icon-background {
   margin: auto;
-  background-color: rgba(30, 30, 30, 0.9);
-  height: 65px;
-  width: 200px;
-  padding-bottom: 20px;
+  background-color: rgba(30, 30, 30, 0.7);
+  height: 20px;
+  border-radius: 0px 0px 10px 10px;
+  width: 223px;
+  border-style: solid;
+  border-color: #1E1E1E;
+  border-width: 2px;
+  border-opacity: 0.7;
   border-bottom-radius: 5px;
-  position: relative;
-  top: -24px;
+  padding-top: 35px;
+  padding-bottom: 40px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
 }
+
+.inline {
+  display: inline;
+}
+
+.dropdown-menu {
+background-color: rgba(30, 30, 30, 0.95);
+}
+
+i {
+  display:flex;
+  content-align: center;
+}
+
