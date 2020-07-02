@@ -1,7 +1,14 @@
 Rails.application.routes.draw do
   devise_for :users
 
-  root to: 'pages#home'
+  authenticated :user do
+    root to: "journeys#main", as: :root
+  end
+  
+  unauthenticated :user do
+    root to: "pages#home", as: :unauthenticated_root
+  end
+
   get '/items', to: 'items#search'
 
   resources :settings, only: [:update] do
