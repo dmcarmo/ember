@@ -7,7 +7,7 @@ function clickOnFileUploader() {
     // add event listener to when the link is clicked
     editLink.addEventListener("click", function(){
         // click on the hidden choose file button
-        const test = document.querySelector('#new_picture');
+       // const test = document.querySelector('#new_picture');
         document.querySelector('#new_picture').click();
     })
   }
@@ -20,6 +20,7 @@ function saveChangedFile(){
     // add event listener to when their values changes (the user picks/takes photo)
     input.addEventListener("change", function(){
       // submit the form to save the file in the server
+      console.log("add a picture");
       const form = document.querySelector('#new_picture').submit();
     });
   });
