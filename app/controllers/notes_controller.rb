@@ -5,7 +5,7 @@ class NotesController < ItemsController
     @note = Note.new
     authorize @note
   end
-  
+
   def create
     @note = Note.new(note_params)
     @journey = Journey.find(params[:journey_id])
@@ -16,7 +16,7 @@ class NotesController < ItemsController
   end
 
   private
-  
+
   def note_params
     params.require(:note).permit(:name, :comment, :content)
   end
