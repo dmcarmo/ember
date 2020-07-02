@@ -33,7 +33,7 @@ li {
   display: flex;
   justify-content: space-around;
   display: inline;
-  color: rgba(80, 80, 80, 0.5);
+  color: rgba(100, 100, 100, 0.5);
 }
 
 li:hover {
@@ -46,6 +46,10 @@ li:active {
 
 a {
   color: inherit;
+}
+
+a:active {
+    color: #ad1d63;
 }
 
 

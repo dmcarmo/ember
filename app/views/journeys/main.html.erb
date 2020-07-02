@@ -1,21 +1,29 @@
-<h1>Ember</h1>
-
-
- <div class="choose_action">
-  <% if @current_journey %>
-  <li class="action">
-    <%= link_to "Continue Journey", journey_path(@current_journey), class: "btn btn-primary" %>
-    <%= link_to new_journey_picture_path(@current_journey) do %><i class="fas fa-camera" aria-hidden="true"></i><% end %>
-    <%= link_to new_journey_audio_path(@current_journey) do %><i class="fas fa-microphone" aria-hidden="true"></i><% end %>
-    <%= link_to new_journey_note_path(@current_journey) do %><i class="fas fa-pencil-alt" aria-hidden="true"></i><% end %>
-  </li>
-  <% end %>
-  <li class="action">
-    <%= link_to "Create New Journey", new_journey_path, class: "btn btn-primary" %>
-  </li>
-    <li class="action">
-    <%= link_to "Journey Albums", journeys_path, class: "btn btn-primary" %>
-  </li>
+<div class="container main-background" style="background-color: none; ">
+  <div class="position">
+    <div class="row row-main">
+    <li class="action main-button">
+      <%= link_to "Create New Journey", new_journey_path %>
+    </li>
+  </div>
+   <br>
+   <br>
+  <div class="row row-main">
+    <div class="choose_action">
+      <li class="action main-button">
+        <%= link_to "Continue Journey", journey_path(@current_journey) %>
+      </li>
+    </div>
+  </div>
+  <br>
+  <br>
+  <div class="row row-main">
+    <li class="action main-button">
+      <%= link_to "Journey Albums", journeys_path %>
+    </li>
+  </div>
+  </div>
 </div>
+
 <%= link_to "Log Out", destroy_user_session_path, method: :delete, class: "btn btn-primary" %>
+
 
