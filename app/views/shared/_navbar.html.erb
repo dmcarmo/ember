@@ -1,16 +1,16 @@
   <div class="navbar-ember">
     <ul>
       <li>
-        <%= link_to journeys_path do %>
+        <%= link_to journeys_path, class: "#{'active' if controller_name == 'journeys' && action_name == 'index'}" do %>
         <i class="far fa-image" style="font-size: 20px;"></i><% end %></li>
       <li>
-        <%= link_to items_path do %><i class="fas fa-search"></i><% end %></li>
+        <%= link_to items_path, class: "#{'active' if controller_name == 'items' && action_name == 'index'}" do %><i class="fas fa-search"></i><% end %></li>
       <li>
-        <%= link_to root_path do %><i class="fab fa-gripfire" style="font-size: 23px;"></i><% end %></li>
+        <%= link_to root_path, class: "#{'active' if controller_name == 'pages' && action_name == 'home'}" do %><i class="fab fa-gripfire" style="font-size: 23px;"></i><% end %></li>
       <li>
-        <%= link_to journeys_path do %><i class="fas fa-globe-europe"></i><% end %></li>
+        <%= link_to journeys_path, class: "#{'active' if controller_name == 'journeys' && action_name == 'map'}" do %><i class="fas fa-globe-europe"></i><% end %></li>
       <li>
-        <%= link_to edit_settings_path do %><i class="fas fa-cog"></i><% end %></li>
+        <%= link_to edit_settings_path, class: "#{'active' if controller_name == 'settings' && action_name == 'edit'}" do %><i class="fas fa-cog"></i><% end %></li>
     </ul>
   </div>
 </div>
