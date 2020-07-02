@@ -6,7 +6,7 @@
       <li>
         <%= link_to items_path, class: "#{'active' if controller_name == 'items' && action_name == 'index'}" do %><i class="fas fa-search"></i><% end %></li>
       <li>
-        <%= link_to root_path, class: "#{'active' if controller_name == 'pages' && action_name == 'home'}" do %><i class="fab fa-gripfire" style="font-size: 23px;"></i><% end %></li>
+        <%= link_to journeys_path, class: "#{'active' if controller_name == 'journeys' && action_name == 'main'}" do %><i class="fab fa-gripfire" style="font-size: 23px;"></i><% end %></li>
       <li>
         <%= link_to journeys_path, class: "#{'active' if controller_name == 'journeys' && action_name == 'map'}" do %><i class="fas fa-globe-europe"></i><% end %></li>
       <li>
