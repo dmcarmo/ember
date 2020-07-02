@@ -7,8 +7,14 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require "open-uri"
 
-puts "Destroying items..."
-Item.destroy_all
+puts "Destroying audio..."
+Audio.destroy_all
+puts "Destroying videos..."
+Video.destroy_all
+puts "Destroying pictures..."
+Picture.destroy_all
+puts "Destroying notes..."
+Note.destroy_all
 puts "Destroying journeys..."
 Journey.destroy_all
 puts "Destroying settings..."

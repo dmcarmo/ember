@@ -13,13 +13,24 @@ class JourneysController < ApplicationController
   def new
     @journey = Journey.new
     authorize @journey
+    #form to give a title to journey
+    #the view should continue to update journey
+  end
+
+  def update
+    #create an item
+    #add item to current journey
+    #go back to main
   end
 
   def create
-    @journey = Journey.new(params[:journey])
+    title = params[:journey][:title]
+    user = current_user
+    start_date = DateTime.now
+    @journey = Journey.new(user: user, title: title, start_date: start_date)
     @journey.save
     authorize @journey
-    redirect_to action: "index"
+    redirect_to action: "main"
   end
 
   def main

@@ -15,11 +15,15 @@
         </div>
       </div>
       <div class="col-6 card-boarders">
-        <div class="card">
-          <div class="card-body" style="height: 30vh;">
-            <%= @journey.items.sample.content %>
+        <% @journey.items.each do |item| %>
+          <div class="card">
+            <div class="card-body" >
+              <div>
+                <%= item.content %>
+              </div>
+            </div>
           </div>
-        </div>
+        <% end %>
          <br>
          <br>
       </div>
