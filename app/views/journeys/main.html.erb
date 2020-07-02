@@ -16,7 +16,7 @@
       <li class="action main-button">
         <%= link_to "Continue Journey", journey_path(@current_journey) %>
       </li>
-      <i class="fas fa-camera" aria-hidden="true"></i>
+        <i class="fas fa-camera" aria-hidden="true"></i>
         <%= link_to new_journey_audio_path(@current_journey) do %><i class="fas fa-microphone" aria-hidden="true"></i><% end %>
         <%= link_to new_journey_note_path(@current_journey) do %><i class="fas fa-pencil-alt" aria-hidden="true"></i><% end %>
     </div>
@@ -39,7 +39,7 @@
 
 <div class="d-none">
 <%= simple_form_for [@current_journey,@picture], remote: true do |f| %>
-    <%= f.input :photo, as: :file %>
+    <%= f.input :photo, as: :file, accept: "image/*;capture=camera"%>
     <%= f.submit 'Save' %>
 <% end %>
 </div>
