@@ -1,5 +1,6 @@
 <h2>Add picture to journey</h2>
-<%= simple_form_for [@current_journey,@picture], remote: true do |f| %>
+
+<%= simple_form_for [@journey,@picture], remote: true do |f| %>
     <%= f.input :photo, as: :file %>
     <%= f.submit 'Save' %>
 <% end %>
