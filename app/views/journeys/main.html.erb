@@ -1,3 +1,4 @@
+
 <h1>Ember</h1>
 
 
@@ -17,8 +18,34 @@
     <li class="action">
     <%= link_to "Journey Albums", journeys_path, class: "btn btn-primary" %>
   </li>
+<div class="container main-background" style="background-color: none; ">
+  <div class="position">
+    <div class="row row-main">
+    <li class="action main-button">
+      <%= link_to "Create New Journey", new_journey_path %>
+    </li>
+  </div>
+   <br>
+   <br>
+  <div class="row row-main">
+    <div class="choose_action">
+      <li class="action main-button">
+        <%= link_to "Continue Journey", journey_path(@current_journey) %>
+      </li>
+    </div>
+  </div>
+  <br>
+  <br>
+  <div class="row row-main">
+    <li class="action main-button">
+      <%= link_to "Journey Albums", journeys_path %>
+    </li>
+  </div>
+  </div>
 </div>
+
 <%= link_to "Log Out", destroy_user_session_path, method: :delete, class: "btn btn-primary" %>
+
 
 <div class="d-none">
 <%= simple_form_for [@current_journey,@picture], remote: true do |f| %>
@@ -26,3 +53,4 @@
     <%= f.submit 'Save' %>
 <% end %>
 </div>
+
