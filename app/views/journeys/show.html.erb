@@ -18,7 +18,11 @@
           <div class="card">
             <%= link_to item_path(item) do %>
               <% if item.type == "Picture" %>
-                <%= cl_image_tag item.photo.key, gravity: "auto", class: "photo" %>
+                <%= cl_image_tag item.photo.key, crop: "fill", class: "img photo" %>
+              <% elsif item.type == "Video" %>
+                <%= cl_video_tag item.video_rec.key %>
+              <% elsif item.type == "Audio" %>
+                <%= cl_video_tag item.audio_rec.key %>
               <% elsif item.type == "Note" %>
                 <div class="card-body">
                   <%= item.content %>

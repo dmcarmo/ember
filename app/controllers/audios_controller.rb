@@ -7,6 +7,7 @@ class AudiosController < ItemsController
   end
 
   def create
+    # @audio = Audio.new(audio_params.merge(resource_type: "video", flags: "waveform"))
     @audio = Audio.new(audio_params)
     @journey = Journey.find(params[:journey_id])
     @audio.journey = @journey
@@ -18,6 +19,6 @@ class AudiosController < ItemsController
   private
   
   def audio_params
-    params.require(:audio).permit(:name, :comment, :content)
+    params.require(:audio).permit(:name, :comment, :content, :audio_rec)
   end
 end
