@@ -16,12 +16,14 @@
       </div>
       <div class="col-6 card-boarders">
         <% @journey.items.each do |item| %>
-          <% if item.type == "Picture" %>
-            <%= cl_image_tag item.photo.key, gravity: "auto", class: "card photo" %>
-          <% elsif item.type == "Note" %>
-            <div class="card card-body">
-              <%= item.content %>
-            </div>
+          <%= link_to item_path(item) do %>
+            <% if item.type == "Picture" %>
+              <%= cl_image_tag item.photo.key, gravity: "auto", class: "card photo" %>
+            <% elsif item.type == "Note" %>
+              <div class="card card-body">
+                <%= item.content %>
+              </div>
+            <% end %>
           <% end %>
         <% end %>
          <br>
