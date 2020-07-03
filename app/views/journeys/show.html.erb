@@ -11,17 +11,20 @@
       <div class="col-6 card-boarders">
         <div class="card">
             <img src="https://149359143.v2.pressablecdn.com/wp-content/uploads/2011/12/Aldaris.jpg" style=" border-radius: 10px; width:100%; margin: auto;" alt="">
-
         </div>
       </div>
       <div class="col-6 card-boarders">
         <% @journey.items.each do |item| %>
           <div class="card">
-            <div class="card-body" >
-              <div>
-                <%= item.content %>
-              </div>
-            </div>
+            <%= link_to item_path(item) do %>
+              <% if item.type == "Picture" %>
+                <%= cl_image_tag item.photo.key, gravity: "auto", class: "photo" %>
+              <% elsif item.type == "Note" %>
+                <div class="card-body">
+                  <%= item.content %>
+                </div>
+              <% end %>
+            <% end %>
           </div>
         <% end %>
          <br>
