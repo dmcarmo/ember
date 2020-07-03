@@ -9,12 +9,19 @@
         <%= link_to main_journeys_path, class: "#{'active' if controller_name == 'journeys' && action_name == 'main'}" do %><i class="fab fa-gripfire" style="font-size: 23px;"></i><% end %></li>
       <li>
         <%= link_to journeys_path, class: "#{'active' if controller_name == 'journeys' && action_name == 'map'}" do %><i class="fas fa-globe-europe"></i><% end %></li>
-      <li>
-        <%= link_to edit_settings_path, class: "#{'active' if controller_name == 'settings' && action_name == 'edit'}" do %><i class="fas fa-cog"></i><% end %></li>
+
+      <li class="nav-item dropdown">
+        <%= icon('fas', 'cog', class: "avatar", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false) %>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+            <%= link_to "Edit user", edit_user_registration_path, class: "dropdown-item" %>
+            <%= link_to "Change settings", edit_settings_path, class: "dropdown-item" %>
+            <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+          </div>
+        </li>
     </ul>
   </div>
-</div>
-<div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
         <li class="nav-item active">
@@ -38,4 +45,5 @@
       <% end %>
     </ul>
   </div>
-</div>
+
+
