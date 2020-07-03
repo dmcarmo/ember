@@ -1,5 +1,7 @@
 
-<h1>Ember</h1>
+<div class="container">
+  <h1>ember</h1>
+</div>
 <div class="container main-background" style="background-color: none; ">
   <div class="position">
     <div class="row row-main">
@@ -11,10 +13,10 @@
     <br>
     <div class="row row-main">
       <div class="choose_action">
-        <a class="btn main-button" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample" style="text-align: center;">
-        Continue Journey
-        </a>
-        <div class="collapse" id="collapseExample">
+        <li class="action main-button round">
+          <a data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">Continue Journey</a>
+        </li>
+        <div class="collapse round" id="collapseExample">
           <div class="icon-background">
             <p id="new_picture" class="main-icons inline"><%= link_to new_journey_picture_path(@current_journey) do %><i class="fas fa-camera" aria-hidden="true"></i><% end %></p>
             <p class="main-icons inline"><%= link_to new_journey_audio_path(@current_journey) do %><i class="fas fa-microphone" aria-hidden="true"></i><% end %></p>
@@ -25,16 +27,10 @@
     </div>
     <br>
     <br>
-  <div class="row row-main">
-    <li class="action main-button round">
-      <%= link_to "Journey Albums", journeys_path %>
-    </li>
-  </div>
-  <br>
-  <div class="row row-main">
-    <li class="action main-button round">
-      <%= link_to "Log Out", destroy_user_session_path, method: :delete, class: "btn btn-primary" %>
-  </li>
-  </div>
+    <div class="row row-main">
+      <li class="action main-button round">
+        <%= link_to "Journey Albums", journeys_path %>
+      </li>
+    </div>
   </div>
 </div>
