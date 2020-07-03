@@ -1,9 +1,10 @@
+<div class="container">
+  <h2>Change your Settings</h2>
 
-<h2>Change your Settings</h2>
-
-<%= simple_form_for @setting do |f| %>
-  <div class="form-inputs">
-    <%= f.input :location_enable, label: "Enable the location" %>
-    <%= f.submit %>
-  </div>
-<% end %>
+  <%= simple_form_for @setting do |f| %>
+    <div class="form-inputs">
+      <%= f.input :location_enable, label: "Enable the location" %>
+      <%= f.submit %>
+    </div>
+</div>
+  <% end %>
