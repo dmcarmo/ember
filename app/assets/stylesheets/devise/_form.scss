@@ -17,6 +17,20 @@
   padding: none;
 }
 
+.signup-form {
+  border-color: rgba(30, 30, 30, 1);
+  border-radius: 100px 100px 100px 100px;
+  width: 160px;
+  height: 40px;
+  color: rgba(120, 120, 120, 1);
+  font-size: 16px;
+  border-style: solid;
+  background-color: rgba(30, 30, 30, 0.9);
+  color: rgb(230, 230, 230);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  padding: none;
+}
+
 .form-actions {
   padding: none;
   margin: auto;
@@ -37,4 +51,11 @@
   box-shadow:         inset 0 0 10px #000000;
 }
 
+.text-align {
+  text-align: center;
+}
 
+.login-center {
+  margin: auto;
+  color: rgba(255, 255, 255, 0.7);
+}
