@@ -18,6 +18,6 @@ class PicturesController < ItemsController
   private
 
   def picture_params
-    params.require(:picture).permit(:name, :comment, :content, :photo)
+    params.require(:picture).permit(:name, :comment, :content, :photo, :tag_list)
   end
 end

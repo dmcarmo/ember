@@ -18,6 +18,6 @@ class NotesController < ItemsController
   private
 
   def note_params
-    params.require(:note).permit(:name, :comment, :content)
+    params.require(:note).permit(:name, :comment, :content, :tag_list)
   end
 end

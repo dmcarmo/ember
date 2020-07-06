@@ -18,6 +18,6 @@ class VideosController < ItemsController
   private
 
   def video_params
-    params.require(:video).permit(:name, :comment, :content, :video_rec)
+    params.require(:video).permit(:name, :comment, :content, :video_rec, :tag_list)
   end
 end

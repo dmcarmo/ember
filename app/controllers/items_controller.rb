@@ -5,7 +5,7 @@ class ItemsController < ApplicationController
   def index
     @items = policy_scope(Item)
     if params[:search_tag].present?
-      @items = Item.search_by_tag(params[:search_tag])
+      @items = Item.tagged_with(params[:search_tag])
     end
   end
 
@@ -16,7 +16,7 @@ class ItemsController < ApplicationController
   private
 
   def item_params
-    params.require(:item).permit(:name, :comment, :content)
+    params.require(:item).permit(:name, :comment, :content, :tag_list)
   end
 
   def set_item

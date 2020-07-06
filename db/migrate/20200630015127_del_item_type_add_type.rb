@@ -4,3 +4,4 @@ class DelItemTypeAddType < ActiveRecord::Migration[6.0]
     add_column :items, :type, :string
   end
 end
+
