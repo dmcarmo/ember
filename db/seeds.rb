@@ -26,12 +26,14 @@ puts "Finished!"
 puts "Creating users..."
 heather = User.create!(username: "heather", email: "heather@email.com", password: "flosseveryday")
 sidd = User.create!(username: "sidd", email: "sidd@email.com", password: "wantaduck?")
+adriana = User.create!(username: "Adriana", email: "adriana@email.com", password: "learncode")
 
 puts "Finished!"
 
 puts "Creating settings..."
 settings_1 = Setting.create!(user: heather, location_enable: true)
 settings_2 = Setting.create!(user: sidd, location_enable: false)
+settings_3 = Setting.create!(user: adriana, location_enable: true)
 
 puts "Finished!"
 
@@ -39,6 +41,11 @@ puts "Creating journey..."
 journey_1 = Journey.create!(user: heather, title: "latvia", start_date: Time.parse("Aug 8 2018 9:00"), end_date: Time.parse("Aug 16 2018 9:00") )
 journey_2 = Journey.create!(user: heather, title: "lisbon", start_date: Time.parse("May 11 2020 9:00"), end_date: Time.parse("Jun 30 2020 9:00") )
 journey_3 = Journey.create!(user: sidd, title: "my house", start_date: Time.parse("Jan 1 1980 9:00"), end_date: Time.parse("Jun 30 2020 9:00") )
+journey_4 = Journey.create!(user: adriana, title: "Namibia", start_date: Time.parse("Nov 1 1980 9:00"), end_date: Time.parse("Jun 30 2020 9:00") )
+journey_5 = Journey.create!(user: adriana, title: "Bolivia", start_date: Time.parse("Jan 1 1980 9:00"), end_date: Time.parse("Jun 30 2020 9:00") )
+journey_6 = Journey.create!(user: adriana, title: "Bali", start_date: Time.parse("Jan 1 1980 9:00"), end_date: Time.parse("Jun 30 2020 9:00") )
+journey_7 = Journey.create!(user: adriana, title: "Mexico", start_date: Time.parse("Jan 1 1980 9:00"), end_date: Time.parse("Jun 30 2020 9:00") )
+journey_8 = Journey.create!(user: adriana, title: "Marocco", start_date: Time.parse("Jan 1 1980 9:00"), end_date: Time.parse("Jun 30 2020 9:00") )
 
 puts "Finished!"
 
