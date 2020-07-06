@@ -1,7 +1,7 @@
 .show-background {
-background-color: rgba(20, 20, 20, 1);
-
+  background-color: rgba(20, 20, 20, 1);
 }
+
 .card-boarders {
   padding: 0px;
   margin: 0px;
@@ -25,4 +25,29 @@ background-color: rgba(20, 20, 20, 1);
   max-height:100%;
   // object-fit: cover;
   border-radius: 10px;
+}
+
+.modal-content {
+  background-color: rgba(30, 30, 30, 1);
+  border-radius: 5px;
+  opacity: 0.9;
+
+}
+
+.modal-header {
+  background-color: rgba(30, 30, 30, 1);
+  border-radius: 5px;
+  border-bottom-color: rgba(30, 30, 30, 0.98);
+}
+
+.modal-body {
+  background-color: rgba(30, 30, 30, 1);
+  border-radius: 5px;
+}
+
+.item-close {
+  padding-right: 10px;
+  padding-top: 10px;
+  text-align: right;
+  color: white;
 }
