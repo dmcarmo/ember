@@ -1,6 +1,11 @@
-<h2>Add audio to journey</h2>
-
-<%= simple_form_for [@journey,@audio], remote: true do |f| %>
-    <%= f.input :audio_rec, as: :file %>
-    <%= f.submit 'Save' %>
-<% end %>
+<div class="container" style="text-align:center">
+  <div class="position">
+    <div class="form-layer">
+      <h2>Add audio to journey</h2>
+      <%= simple_form_for [@journey,@audio], remote: true do |f| %>
+        <%= f.input :audio_rec, as: :file %>
+        <%= f.submit 'Save', class: "btn-form"%>
+      <% end %>
+    </div>
+  </div>
+</div>
