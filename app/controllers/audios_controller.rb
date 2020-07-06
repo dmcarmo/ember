@@ -15,10 +15,10 @@ class AudiosController < ItemsController
     authorize @audio
     redirect_to main_journeys_path, notice: "Audio saved"
   end
-  
+
   private
-  
+
   def audio_params
-    params.require(:audio).permit(:name, :comment, :content, :audio_rec)
+    params.require(:audio).permit(:name, :comment, :content, :audio_rec, tag_list: [])
   end
 end
