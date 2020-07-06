@@ -4,8 +4,8 @@ class ItemsController < ApplicationController
 
   def index
     @items = policy_scope(Item)
-    if params[:query].present?
-    @items = Item.global_search(params[:query])
+    if params[:search_tag].present?
+      @items = Item.search_by_tag(params[:search_tag])
     end
   end
 

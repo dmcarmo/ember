@@ -5,7 +5,7 @@ class JourneysController < ApplicationController
   def index
     @journeys = policy_scope(Journey)
     if params[:query].present?
-    @journeys = Journey.global_search(params[:query])
+      @journeys = Journey.global_search(params[:query])
     end
   end
 
