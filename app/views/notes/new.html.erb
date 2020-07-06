@@ -1,11 +1,15 @@
-<h2>Add note to journey</h2>
-
-<%= simple_form_for [@journey, @note] do |f| %>
-  <div class="form-inputs">
-    <%= f.input :content %>
+<div class="container" style="text-align:center">
+  <div class="position">
+     <div class="form-layer">
+      <h2>Add note to journey</h2>
+      <%= simple_form_for [@journey, @note] do |f| %>
+        <div class="form-inputs">
+          <%= f.input :content %>
+        </div>
+        <div class="form-actions">
+          <%= f.button :submit, "Save note", class: "btn-form" %>
+        </div>
+      <% end %>
+    </div>
   </div>
-
-  <div class="form-actions">
-    <%= f.button :submit, "Save note", class: "btn btn-primary" %>
-  </div>
-<% end %>
+</div>
