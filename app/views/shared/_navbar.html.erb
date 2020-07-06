@@ -4,7 +4,7 @@
         <%= link_to journeys_path, class: "#{'active' if controller_name == 'journeys' && action_name == 'index'}" do %>
         <i class="far fa-image" style="font-size: 20px;"></i><% end %></li>
       <li>
-        <%= link_to items_path, class: "#{'active' if controller_name == 'items' && action_name == 'index'}" do %><i class="fas fa-search"></i><% end %></li>
+        <%= link_to journeys_path, data: { toggle: "modal", target: "#exampleModalCenter" } do %><i class="fas fa-search"></i><% end %></li>
       <li>
         <%= link_to main_journeys_path, class: "#{'active' if controller_name == 'journeys' && action_name == 'main'}" do %><i class="fab fa-gripfire" style="font-size: 23px;"></i><% end %></li>
       <li>
@@ -46,4 +46,4 @@
     </ul>
   </div>
 
-
+ <%= render "shared/search_modal" %>

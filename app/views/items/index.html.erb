@@ -1,12 +1,10 @@
 <h1>List of items for this journey - replace this with the current journey name/title</h1>
-
+<br>
+<br>
+<div class="row">
 <% @items.each do |item| %>
-<div class= item-card>
-  <ul>
-    <li><%= item.type %></li>
-  </ul>
-  <ul>
-    <li><%= item.content %></li>
-  </ul>
-</div>
+  <div class="col-12 card-boarders">
+    <%= render partial: 'items/item', locals: { item: item } %>
+  </div>
 <% end %>
+</div>

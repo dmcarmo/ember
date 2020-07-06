@@ -4,12 +4,11 @@ Rails.application.routes.draw do
   authenticated :user do
     root to: "journeys#main", as: :root
   end
-  
+
   unauthenticated :user do
     root to: "pages#home", as: :unauthenticated_root
   end
 
-  get '/items', to: 'items#search'
 
   resources :settings, only: [:update] do
     collection do
@@ -25,5 +24,5 @@ Rails.application.routes.draw do
     resources :notes, :pictures, :videos, :audios, only: [:index, :new, :create]
   end
 
-  resources :items, only: [:show, :edit, :update, :destroy]
+  resources :items, only: [:show, :edit, :update, :destroy, :index]
 end
