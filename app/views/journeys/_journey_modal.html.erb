@@ -8,9 +8,7 @@
         </div>
 
       <div class="modal-body">
-          <div class="card-body">
-            <%= item.content %>
-          </div>
+        <%= render partial: 'items/item', locals: { item: item } %>
       </div>
     </div>
   </div>

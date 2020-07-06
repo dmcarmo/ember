@@ -18,15 +18,21 @@
         </li>
         <div class="collapse round" id="collapseExample">
           <div class="icon-background">
-
             <p id="new_picture" class="main-icons inline">
               <%= link_to new_journey_picture_path(@current_journey) do %>
                 <i class="fas fa-camera" aria-hidden="true"></i>
               <% end %>
             </p>
-
-            <p class="main-icons inline"><%= link_to new_journey_audio_path(@current_journey) do %><i class="fas fa-microphone" aria-hidden="true"></i><% end %></p>
-            <p class="main-icons inline"><%= link_to new_journey_note_path(@current_journey) do %><i class="fas fa-pencil-alt" aria-hidden="true"></i><% end %></p>
+            <p class="main-icons inline">
+              <%= link_to new_journey_audio_path(@current_journey) do %>
+                <i class="fas fa-microphone" aria-hidden="true"></i>
+              <% end %>
+            </p>
+            <p class="main-icons inline">
+              <%= link_to new_journey_note_path(@current_journey) do %>
+                <i class="fas fa-pencil-alt" aria-hidden="true"></i>
+              <% end %>
+            </p>
           </div>
         </div>
       </div>
