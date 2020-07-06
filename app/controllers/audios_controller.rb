@@ -19,6 +19,6 @@ class AudiosController < ItemsController
   private
 
   def audio_params
-    params.require(:audio).permit(:name, :comment, :content, :audio_rec, tag_list: [])
+    params.require(:audio).permit(:name, :comment, :content, :audio_rec, :tag_list)
   end
 end

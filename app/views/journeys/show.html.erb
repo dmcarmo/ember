@@ -15,11 +15,16 @@
             <% elsif item.type == "Note" %>
               <div class="card-body">
                 <%= item.content %>
+                <% if policy(item).destroy? %>
+                  <div class="btn btn-primary">
+                    <%= link_to "Destroy", item_path(item), method: :delete, data: { confirm: "Are you sure you wanna destroy it?" } %>
+                  </div>
+                <% end %>
               </div>
             <% end %>
           </div>
         </div>
-        <%= render partial: 'items/item', locals: { item: item } %>
+        <%#= render partial: 'items/item', locals: { item: item } %>
       <% end %>
       <br>
       <br>

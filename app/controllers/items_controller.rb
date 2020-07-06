@@ -13,6 +13,12 @@ class ItemsController < ApplicationController
     authorize @item
   end
 
+  def destroy
+    @item = @item.destroy
+    authorize @item
+    redirect_to journey_path, notice: "Successfully deleted!"
+  end
+
   private
 
   def item_params
