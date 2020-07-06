@@ -1,79 +1,27 @@
-<div class="container show-background">
+<div class="container">
   <h4><%= @journey.title %> <%= @journey.start_date %> <%= @journey.end_date %></h4>
     <div class="row">
       <div class="col-12 card-boarders">
         <div class="card">
-          <button type="button" class="btn ibtn" data-toggle="modal" data-target="#exampleModalCenter"></button>
-          <img src="https://images.squarespace-cdn.com/content/v1/549d41a3e4b003c6ce131926/1498578184205-GH2MO014O7BTNXSE58QN/ke17ZwdGBToddI8pDm48kKo6K4nzwH4_qC3GsKGYQ297gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1UYIIs9GSzFoX1QQ48IpvjVfhKYOpCCKFxshznv23YZGJNKOigyfB8BfAL6B2Stgizg/image-asset.jpeg?format=1500w" style=" border-radius: 10px;width:100%; margin: auto;" alt="">
+            <img src="https://images.squarespace-cdn.com/content/v1/549d41a3e4b003c6ce131926/1498578184205-GH2MO014O7BTNXSE58QN/ke17ZwdGBToddI8pDm48kKo6K4nzwH4_qC3GsKGYQ297gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1UYIIs9GSzFoX1QQ48IpvjVfhKYOpCCKFxshznv23YZGJNKOigyfB8BfAL6B2Stgizg/image-asset.jpeg?format=1500w" style=" border-radius: 10px;width:100%; margin: auto;" alt="">
         </div>
       </div>
     </div>
     <div class="row">
       <div class="col-6 card-boarders">
         <div class="card">
-          <button type="button" class="btn ibtn" data-toggle="modal" data-target="#exampleModalCenter"></button>
-          <img src="https://149359143.v2.pressablecdn.com/wp-content/uploads/2011/12/Aldaris.jpg" style=" border-radius: 10px; width:100%; margin: auto;" alt="">
+            <img src="https://149359143.v2.pressablecdn.com/wp-content/uploads/2011/12/Aldaris.jpg" style=" border-radius: 10px; width:100%; margin: auto;" alt="">
         </div>
       </div>
       <div class="col-6 card-boarders">
         <% @journey.items.each do |item| %>
-          <div class="card">
-            <!-- Button trigger modal -->
-          <button type="button" class="btn ibtn" data-toggle="modal" data-target="#exampleModalCenter"></button>
-            <%= link_to item_path(item) do %>
-              <% if item.type == "Picture" %>
-                <%= cl_image_tag item.photo.key, class: "photo" %>
-              <% elsif item.type == "Video" %>
-                <%= cl_video_tag item.video_rec.key %>
-              <% elsif item.type == "Audio" %>
-                <%= cl_video_tag item.audio_rec.key %>
-              <% elsif item.type == "Note" %>
-                <div class="card-body">
-                  <%= item.content %>
-                </div>
-              <% end %>
-            <% end %>
-          </div>
+        <%= render partial: 'items/item', locals: { item: item } %>
         <% end %>
-        <br>
-        <br>
+         <br>
+         <br>
       </div>
     <div class="ibtn"><%= link_to "Go back", journeys_path %></div>
-    </div>
-  <br>
-  <br>
-</div>
-
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <% @journey.items.each do |item| %>
-          <%= link_to item_path(item) do %>
-            <% if item.type == "Picture" %>
-              <%= cl_image_tag item.photo.key, class: "photo" %>
-            <% elsif item.type == "Video" %>
-              <%= cl_video_tag item.video_rec.key %>
-            <% elsif item.type == "Audio" %>
-              <%= cl_video_tag item.audio_rec.key %>
-            <% elsif item.type == "Note" %>
-            <% end %>
-           <% end %>
-          <div class="card-body">
-            <%= item.content %>
-          </div>
-        <% end %>
-      </div>
-    </div>
   </div>
-</div>
-
-
-
+   <br>
+   <br>
+ </div>
