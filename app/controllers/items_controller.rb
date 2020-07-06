@@ -4,6 +4,9 @@ class ItemsController < ApplicationController
 
   def index
     @items = policy_scope(Item)
+    if params[:query].present?
+    @items = Item.global_search(params[:query])
+    end
   end
 
   def show

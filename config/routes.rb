@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   authenticated :user do
     root to: "journeys#main", as: :root
   end
-  
+
   unauthenticated :user do
     root to: "pages#home", as: :unauthenticated_root
   end
