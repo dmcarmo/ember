@@ -56,5 +56,20 @@ item_3 = Note.create!(content: "Do do do do do do do do do do doooooooo beeee do
 item_4 = Note.create!(content: "Why is this shop full of rubber ducks?", comment: "", journey: journey_2 )
 item_5 = Note.create!(content: "Learning to code is making my brain melt, please save me!!", comment: "", journey: journey_2 )
 item_6 = Note.create!(content: "Just sitting in the house", comment: "", journey: journey_3 )
+audio_1 = Audio.new( journey: journey_2 )
+file = URI.open("http://soundbible.com/grab.php?id=1264&type=mp3")
+audio_1.audio_rec.attach(io: file, filename: 'audio_1.mp3', content_type: 'audio/mpeg')
+audio_1.save!
+video_1 = Video.new( journey: journey_2 )
+file = URI.open("https://res.cloudinary.com/doh7xoars/video/upload/v1594072485/ember/seed/Pexels_Videos_2790317_bbxd34.mp4")
+video_1.video_rec.attach(io: file, filename: 'video_1.mp4', content_type: 'video/mp4')
+video_1.save!
+picture_1 = Picture.new( journey: journey_2 )
+file = URI.open("https://res.cloudinary.com/doh7xoars/image/upload/v1594043683/ember/seed/pb727631efvm2o10n8obhninb7vb.jpg")
+picture_1.photo.attach(io: file, filename: 'picture_1.jpg', content_type: 'image/jpeg')
+picture_1.save!
+
 
 puts "Created #{Item.count} entries."
+
+
