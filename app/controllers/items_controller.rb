@@ -14,7 +14,7 @@ class ItemsController < ApplicationController
   end
 
   def update
-    @item.save
+    @item.update(tag_list: params[@item.class.name.downcase][:tag_list])
     authorize @item
     redirect_to journey_path(@item.journey)
   end
