@@ -5,15 +5,23 @@
     <div class="col-12 card-boarders">
       <% @journey.items.each do |item| %>
         <%= render "journeys/journey_modal", item: item %>
+        <%= render "items/tags_modal_form", item: item %>
         <div class="card">
+          <div class="options text-right" >
+              <i class="fas fa-tags" data-toggle="modal" data-target="#tagsModalCenter<%= item.id %>"></i>
+              <% if policy(item).destroy? %>
+              <%= link_to item_path(item), method: :delete, data: { confirm: "Are you sure you wanna destroy it?" } do %>
+              <i class="far fa-trash-alt"></i>
+              <% end %>
+              <% end %>
+            </div>
           <div data-toggle="modal" data-target="#exampleModalCenter<%= item.id %>">
+
             <% if item.type == "Picture" %>
               <%= cl_image_tag item.photo.key, class: "photo" %>
             <% elsif item.type == "Video" %>
-              <p>VIDEO</p>
               <%= cl_video_tag item.video_rec.key, controls: true, class: "photo" %>
             <% elsif item.type == "Audio" %>
-              <p>AUDIO</p>
               <%= cl_video_tag item.audio_rec.key, controls: true, class: "photo" %>
             <% elsif item.type == "Note" %>
               <div class="card-body">
@@ -21,9 +29,8 @@
               </div>
             <% end %>
           </div>
-        </div>
-        <%# = render partial: 'items/item', locals: { item: item } %>
-      <% end %>
+          </div>
+        <% end %>
       <br>
       <br>
       <div class="btn btn-form" style="padding-left: 15px;"><%= link_to "Go back", journeys_path %></div>
@@ -33,3 +40,4 @@
   <br>
   </div>
 </div>
+

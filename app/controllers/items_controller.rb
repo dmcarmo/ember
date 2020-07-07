@@ -13,6 +13,18 @@ class ItemsController < ApplicationController
     authorize @item
   end
 
+  def update
+    @item.update(tag_list: params[@item.class.name.downcase][:tag_list])
+    authorize @item
+    redirect_to journey_path(@item.journey)
+  end
+
+  def destroy
+    @item = @item.destroy
+    authorize @item
+    redirect_to journey_path(@item.journey), notice: "Successfully deleted!"
+  end
+
   private
 
   def item_params

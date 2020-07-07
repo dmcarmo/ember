@@ -6,6 +6,7 @@
   padding: 0px;
   margin: 0px;
   height: 100%;
+  position: relative;
 }
 
 .row {
@@ -51,4 +52,8 @@
   padding-top: 10px;
   text-align: right;
   color: white;
+}
+
+.options {
+  padding: 10px;
 }
