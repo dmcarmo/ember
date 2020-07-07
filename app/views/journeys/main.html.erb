@@ -11,38 +11,40 @@
     </div>
     <br>
     <br>
-    <div class="row row-main">
-      <div class="choose_action">
-        <li class="action main-button round">
-          <a data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">Continue Journey</a>
-        </li>
-        <div class="collapse round" id="collapseExample">
-          <div class="icon-background">
-            <% last_journey = @current_user.journeys.last %>
-            <p id="new_picture" class="main-icons inline">
-              <%= link_to new_journey_picture_path(last_journey) do %>
-                <i class="fas fa-camera" aria-hidden="true"></i>
-              <% end %>
-            </p>
-            <p class="main-icons inline">
-              <%= link_to new_journey_video_path(last_journey) do %>
-                <i class="fas fa-video" aria-hidden="true"></i>
-              <% end %>
-            </p>
-            <p class="main-icons inline">
-              <%= link_to new_journey_audio_path(last_journey) do %>
-                <i class="fas fa-microphone" aria-hidden="true"></i>
-              <% end %>
-            </p>
-            <p class="main-icons inline">
-              <%= link_to new_journey_note_path(last_journey) do %>
-                <i class="fas fa-pencil-alt" aria-hidden="true"></i>
-              <% end %>
-            </p>
+    <% unless @current_user.journeys.last.nil? %>
+      <div class="row row-main">
+        <div class="choose_action">
+          <li class="action main-button round">
+            <a data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">Continue Journey</a>
+          </li>
+          <div class="collapse round" id="collapseExample">
+            <div class="icon-background">
+              <% last_journey = @current_user.journeys.last %>
+              <p id="new_picture" class="main-icons inline">
+                <%= link_to new_journey_picture_path(last_journey) do %>
+                  <i class="fas fa-camera" aria-hidden="true"></i>
+                <% end %>
+              </p>
+              <p class="main-icons inline">
+                <%= link_to new_journey_video_path(last_journey) do %>
+                  <i class="fas fa-video" aria-hidden="true"></i>
+                <% end %>
+              </p>
+              <p class="main-icons inline">
+                <%= link_to new_journey_audio_path(last_journey) do %>
+                  <i class="fas fa-microphone" aria-hidden="true"></i>
+                <% end %>
+              </p>
+              <p class="main-icons inline">
+                <%= link_to new_journey_note_path(last_journey) do %>
+                  <i class="fas fa-pencil-alt" aria-hidden="true"></i>
+                <% end %>
+              </p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    <% end %>
     <br>
     <br>
     <div class="row row-main">
