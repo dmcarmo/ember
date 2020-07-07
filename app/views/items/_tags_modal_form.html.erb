@@ -1,0 +1,20 @@
+<!-- Modal -->
+<div class="modal fade" id="tagsModalCenter<%= item.id %>" tabindex="-1" role="dialog" aria-labelledby="tagsModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div type="button" class=" item-close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </div>
+        <div class="modal-body">
+         <%= simple_form_for item, url: item_path(item) do |f| %>
+        <div class="form-inputs">
+          <%= f.input :tag_list, label: "Add tags", hint: "Add your tags, separated by commas" %>
+        </div>
+        <div class="form-actions">
+          <%= f.button :submit, "Save tags", class: "btn-form" %>
+        </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
