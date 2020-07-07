@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-  <head><%= meta_title %></title>
+  <head>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -16,7 +16,6 @@
   <body>
     <%= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
-
     <%= yield %>
   </body>
 </html>
