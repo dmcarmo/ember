@@ -10,10 +10,10 @@
               <%= cl_image_tag item.photo.key, class: "photo" %>
             <% elsif item.type == "Video" %>
               <p>VIDEO</p>
-              <%= cl_video_tag item.video_rec.key, controls: true, class: "photo" %>
+              <%= cl_video_tag item.video_rec.key, class: "photo" %>
             <% elsif item.type == "Audio" %>
               <p>AUDIO</p>
-              <%= cl_video_tag item.audio_rec.key, controls: true, class: "photo" %>
+              <%= cl_video_tag item.audio_rec.key, class: "photo" %>
             <% elsif item.type == "Note" %>
               <div class="card-body">
                 <%= item.content %>
