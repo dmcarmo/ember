@@ -3,9 +3,9 @@
     <div class="form-layer">
       <h2>Add picture to journey</h2>
       <%= simple_form_for [@journey,@picture], remote: true do |f| %>
-        <%= f.input :photo, as: :file, 
-          input_html: { id: "league-photo-upload", class: 'hidden-uploader', placeholder: "Upload picture", accept: "image/*", capture: "camera" }, 
-          label_html: { class: 'main-button upload-photo', accept: "image/*", capture: "camera" }, 
+        <%= f.input :photo, as: :file,
+          input_html: { id: "league-photo-upload", class: 'hidden-uploader', placeholder: "Upload picture", accept: "image/*", capture: "camera" },
+          label_html: { class: 'upload-photo', accept: "image/*", capture: "camera" },
           label: 'Upload picture' %>
         <%= f.input :photo_attachment, as: :hidden,input_html: { placeholder: "Upload picture" }%>
         <%= image_tag "picture_placeholder.png", id: "img_prev", class: "photo-thumbnail", alt: "Journey Photo" %>

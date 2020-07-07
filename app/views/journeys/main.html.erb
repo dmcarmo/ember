@@ -25,6 +25,11 @@
               <% end %>
             </p>
             <p class="main-icons inline">
+              <%= link_to new_journey_picture_path(last_journey) do %>
+                <i class="fas fa-video" aria-hidden="true"></i>
+              <% end %>
+            </p>
+            <p class="main-icons inline">
               <%= link_to new_journey_audio_path(last_journey) do %>
                 <i class="fas fa-microphone" aria-hidden="true"></i>
               <% end %>
