@@ -1,6 +1,6 @@
 <div class="container">
   <div class="show-background">
-  <h4><%= @journey.title %> <%= @journey.start_date %> <%= @journey.end_date %></h4>
+  <h4 style = "text-transform:capitalize;"><%= @journey.title %> <%= time_ago_in_words @journey.start_date %></h4>
   <div class="row">
     <div class="col-12 card-boarders">
       <% @journey.items.each do |item| %>
