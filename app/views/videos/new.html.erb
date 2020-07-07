@@ -1,1 +1,17 @@
-<h2>Add video to journey</h2>
+<div class="container" style="text-align:center">
+  <div class="position">
+    <div class="form-layer">
+      <h2>Add video to journey</h2>
+      <%= simple_form_for [@journey,@video], remote: true do |f| %>
+        <%= f.input :video_rec, as: :file,
+          input_html: { id: "photo-upload", class: 'hidden-uploader', placeholder: "Capture video", accept: "video/*", capture: "camera" },
+          label_html: { class: 'upload-media', accept: "video/*", capture: "camera" },
+          label: 'Capture video' %>
+        <%= f.input :video_rec_attachment, as: :hidden,input_html: { placeholder: "Capture video" }%>
+        <%= image_tag "picture_placeholder.png", id: "img_prev", class: "photo-thumbnail", alt: "Journey Video" %>
+        <%= f.input :tag_list, label: "Add tags", hint: "Add your tags, separated by commas" %>
+        <%= f.submit 'Save', class: 'btn-form' %>
+      <% end %>
+    </div>
+  </div>
+</div>
