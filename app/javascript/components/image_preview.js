@@ -9,7 +9,7 @@ $(function() {
       reader.readAsDataURL(input.files[0]);
     }
   }
-  $("#league-photo-upload").change(function(){
+  $("#photo-upload").change(function(){
     $('#img_prev').removeClass('form-hidden-image');
     readURL(this);
   });
