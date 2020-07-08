@@ -15,12 +15,13 @@ $headers-font: "Nunito", "Helvetica", "sans-serif";
 // }
 // $my-font: "Font Name";
 body {
-  background: url(https://wallpapers.party/media/2018/06/colourful-pink-1.jpg);
+  background-image: url('backgroundtest.png');
+  background-blend-mode: multiply;
   position: relative;
   background-repeat: none;
   background-size: 100%;
   min-height: 500px;
   background-attachment: fixed;
   background-size: cover;
-}
+  }
 

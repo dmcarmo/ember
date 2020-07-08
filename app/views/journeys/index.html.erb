@@ -1,27 +1,26 @@
+
 <div class="journeys-body">
-  <div class="layer">
-    <div class="row">
-      <div class="col-12 col-sm-6">
-        <h5>Journeys</h5>
-        <% @journeys.each do |journey| %>
-          <div class="card">
-            <%= link_to journey_path(journey) do %>
-              <div class="card-body">
-                <h3 class="card-title" style = "text-transform:capitalize;"><%= journey.title %></h3>
-                <p class="card-text" style = "text-transform:capitalize;"> started <%= time_ago_in_words journey.start_date %> ago.</p>
-                <!--  <%= link_to "See Journey", journey_path(journey) %> -->
-              </div>
-            <% end %>
-            <div class="options text-right" >
-              <% if policy(journey).destroy? %>
-                <%= link_to journey_path(journey), method: :delete, data: { confirm: "Are you sure you wanna destroy it?" } do %>
-                  <i class="far fa-trash-alt"></i>
-                <% end %>
-              <% end %>
+  <div class="row">
+    <div class="col-12 col-sm-6">
+      <h5>Journeys</h5>
+      <% @journeys.each do |journey| %>
+        <div class="card">
+          <%= link_to journey_path(journey) do %>
+            <div class="card-body">
+              <h3 class="card-title" style = "text-transform:capitalize;"><%= journey.title %></h3>
+              <p class="card-text" style = "text-transform:capitalize;"> started <%= time_ago_in_words journey.start_date %> ago.</p>
+              <!--  <%= link_to "See Journey", journey_path(journey) %> -->
             </div>
+          <% end %>
+          <div class="options text-right" >
+            <% if policy(journey).destroy? %>
+              <%= link_to journey_path(journey), method: :delete, data: { confirm: "Are you sure you wanna destroy it?" } do %>
+                <i class="far fa-trash-alt"></i>
+              <% end %>
+            <% end %>
           </div>
-        <% end %>
-      </div>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>
