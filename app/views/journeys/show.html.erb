@@ -10,12 +10,11 @@
           <div class="options text-right" >
             <i class="fas fa-tags" data-toggle="modal" data-target="#tagsModalCenter<%= item.id %>"></i>
             <% if policy(item).destroy? %>
-              <%= link_to item_path(item), method: :delete, data: { confirm: "Are you sure you wanna destroy it?" } do %>
+              <%= link_to item_path(item), method: :delete, data: { confirm: "Are you sure you want to delete the item?" } do %>
                 <i class="far fa-trash-alt"></i>
               <% end %>
             <% end %>
           </div>
-          <br>
           <div data-toggle="modal" data-target="#exampleModalCenter<%= item.id %>">
 
             <% if item.type == "Picture" %>
@@ -32,11 +31,14 @@
               </div>
             <% end %>
           </div>
-          </div>
-        <% end %>
+          <br>
+        </div>
+      <% end %>
       <br>
       <br>
-      <div class="btn btn-form" style="padding-left: 15px;"><%= link_to "Go back", journeys_path %></div>
+      <div class="btn btn-form" style="padding-left: 15px;">
+        <%= link_to "Go back", journeys_path %>
+      </div>
     </div>
   </div>
   <br>
