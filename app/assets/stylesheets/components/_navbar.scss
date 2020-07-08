@@ -6,6 +6,8 @@
   border-bottom-width: 100%;
   border-bottom-style: 1px;
   border-bottom-color: #302f2f;
+  z-index: 100;
+
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -63,4 +65,14 @@ a:active {
 
 .dropdown-item:hover {
   background-color: #ad1d63;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 80px;
 }

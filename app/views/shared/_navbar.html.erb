@@ -1,4 +1,4 @@
-  <div class="navbar-ember">
+  <div class="navbar-ember fixed-top" id="navbar">
     <ul>
       <li>
         <%= link_to journeys_path, class: "#{'active' if controller_name == 'journeys' && action_name == 'index'}" do %>
@@ -6,7 +6,7 @@
       <li>
         <%= link_to journeys_path, data: { toggle: "modal", target: "#exampleModalCenter" } do %><i class="fas fa-search"></i><% end %></li>
       <li>
-        <%= link_to main_journeys_path, class: "#{'active' if controller_name == 'journeys' && action_name == 'main'}" do %><i class="fab fa-gripfire" style="font-size: 23px;"></i><% end %></li>
+        <%= link_to main_journeys_path, class: "#{'active' if controller_name == 'journeys' && action_name == 'main' || action_name == 'new'}" do %><i class="fab fa-gripfire" style="font-size: 23px;"></i><% end %></li>
       <li>
         <%= link_to map_journeys_path, class: "#{'active' if controller_name == 'journeys' && action_name == 'map'}" do %><i class="fas fa-globe-europe"></i><% end %></li>
 
