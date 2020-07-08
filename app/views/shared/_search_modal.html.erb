@@ -6,16 +6,6 @@
         <span aria-hidden="true" >&times;</span>
       </div>
         <br>
-        <%= submit_tag "Search", class: "btn-home" %>
-      <% end %>
-      </div>
-        <div class="modal-body">
-        <%= form_tag items_path, method: :get do %>
-        <%= collection_select :search_tag,
-        params[:search_tag], Tag.all,
-        class: "form-control",
-        placeholder: "Search for tags?"
-        %>
         <br>
       <div class="row">
         <div class="col-12 ">
