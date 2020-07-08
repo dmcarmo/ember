@@ -1,6 +1,6 @@
 <div class="container">
   <div class="show-background">
-  <h4 style = "text-transform:capitalize;"><%= @journey.title %> <%= time_ago_in_words @journey.start_date %></h4>
+  <h4 style = "text-transform:capitalize;"><%= @journey.title %> <span style = "display: block;"> started <%= time_ago_in_words @journey.start_date %> ago </h4>
   <div class="row">
     <div class="col-12 card-boarders">
       <% @journey.items.each do |item| %>
@@ -14,7 +14,8 @@
               <i class="far fa-trash-alt"></i>
               <% end %>
               <% end %>
-            </div>
+          </div>
+          <br>
           <div data-toggle="modal" data-target="#exampleModalCenter<%= item.id %>">
 
             <% if item.type == "Picture" %>
