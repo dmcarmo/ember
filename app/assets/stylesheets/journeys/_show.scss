@@ -54,6 +54,20 @@
   color: white;
 }
 
-.options {
+.options.text-right {
   padding: 10px;
+  width: 60px;
+  height: 30px;
+  position: absolute;
+  right: 0px;
+  bottom: 5px;
+  color: rgb(75, 75, 75)
+}
+
+.far.fa-trash-alt {
+  color: red($color: #c22b2b);
+  }
+
+.fas.fa-tags {
+  color: red($color: #c22b2b);
 }
