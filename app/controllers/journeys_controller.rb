@@ -41,7 +41,13 @@ class JourneysController < ApplicationController
     @journey = Journey.new(user: user, title: title, start_date: start_date)
     @journey.save
     authorize @journey
-    redirect_to action: "main"
+    redirect_to main_journeys_path, notice: "Successfully created!"
+  end
+
+  def destroy
+    @journey = @journey.destroy
+    authorize @journey
+    redirect_to journeys_path, notice: "Successfully deleted!"
   end
 
   def main
