@@ -47,7 +47,7 @@ class JourneysController < ApplicationController
   def destroy
     @journey = @journey.destroy
     authorize @journey
-    redirect_to journeys_path(), notice: "Successfully deleted!"
+    redirect_to journeys_path, notice: "Successfully deleted!"
   end
 
   def main
