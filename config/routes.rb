@@ -20,7 +20,8 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :journeys, only: [:index, :show, :new, :create, :destroy] do
+  get '/journeys', to: 'journeys#index'
+  resources :journeys, only: [:show, :new, :create, :destroy] do
     collection do
       get :main
       get :map
