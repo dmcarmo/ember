@@ -20,7 +20,7 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :journeys, only: [:show, :new, :create, :destroy] do
+  resources :journeys, only: [:index, :show, :new, :create, :destroy] do
     collection do
       get :main
       get :map
