@@ -1,6 +1,7 @@
 class JourneysController < ApplicationController
 
   before_action :set_journey, only: [:show, :edit, :update, :destroy]
+  skip_after_action :verify_authorized, only: [:map]
 
   def index
     @journeys = policy_scope(Journey)
@@ -21,6 +22,18 @@ class JourneysController < ApplicationController
   def update
   end
 
+  def map
+    @items = Item.geocoded # returns flats with coordinates
+
+    @markers = @items.map do |item|
+      {
+        lat: item.latitude,
+        lng: item.longitude,
+        infoWindow: render_to_string(partial: "info_window", locals: { item: item })
+      }
+    end
+  end
+
   def create
     title = params[:journey][:title]
     user = current_user
@@ -28,7 +41,13 @@ class JourneysController < ApplicationController
     @journey = Journey.new(user: user, title: title, start_date: start_date)
     @journey.save
     authorize @journey
-    redirect_to action: "main"
+    redirect_to main_journeys_path, notice: "Successfully created!"
+  end
+
+  def destroy
+    @journey = @journey.destroy
+    authorize @journey
+    redirect_to journeys_path, notice: "Successfully deleted!"
   end
 
   def main
