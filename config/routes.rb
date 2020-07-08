@@ -23,6 +23,7 @@ Rails.application.routes.draw do
   resources :journeys, only: [:index, :show, :new, :create, :destroy] do
     collection do
       get :main
+      get :map
     end
     resources :items, only: [:index]
     resources :notes, :pictures, :videos, :audios, only: [:index, :new, :create]

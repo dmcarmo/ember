@@ -24,11 +24,19 @@ class ApplicationController < ActionController::Base
   { host: ENV["DOMAIN"] || "localhost:3000" }
   end
 
+  def current_location
+    if Rails.env.development?
+      geo_data = Geocoder.search('192.168.1.67')
+    else
+      geo_data = Geocoder.search(request.remote_ip)
+    end
+      [geo_data[0].city, geo_data[0].country_code ].compact.join(', ')
+  end
+
   def configure_permitted_parameters
     # For additional fields in app/views/devise/registrations/new.html.erb
     devise_parameter_sanitizer.permit(:sign_up, keys: [:username])
     # For additional in app/views/devise/registrations/edit.html.erb
     devise_parameter_sanitizer.permit(:account_update, keys: [:username])
   end
-
 end

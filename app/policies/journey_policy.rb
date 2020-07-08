@@ -24,4 +24,8 @@ class JourneyPolicy < ApplicationPolicy
   def main?
     user.present?
   end
+
+  def map?
+    true
+  end
 end

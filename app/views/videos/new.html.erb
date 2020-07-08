@@ -10,6 +10,7 @@
         <%= f.input :video_rec_attachment, as: :hidden,input_html: { placeholder: "Capture video" }%>
         <%= image_tag "picture_placeholder.png", id: "img_prev", class: "photo-thumbnail", alt: "Journey Video" %>
         <%= f.input :tag_list, label: "Add tags", hint: "Add your tags, separated by commas" %>
+        <%= f.input :location %>
         <%= f.submit 'Save', class: 'btn-form' %>
       <% end %>
     </div>
