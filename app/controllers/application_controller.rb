@@ -22,4 +22,13 @@ class ApplicationController < ActionController::Base
   def default_url_options
   { host: ENV["DOMAIN"] || "localhost:3000" }
   end
+
+  def current_location
+  if Rails.env.development?
+    geo_data = Geocoder.search('192.168.1.67')
+  else
+    geo_data = Geocoder.search(request.remote_ip)
+  end
+    [geo_data[0].city, geo_data[0].country_code ].compact.join(', ')
+end
 end

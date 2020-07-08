@@ -5,8 +5,8 @@
       <%= simple_form_for [@journey, @note] do |f| %>
         <div class="form-inputs">
           <%= f.input :content %>
-
-         <%= f.input :tag_list, label: "Add tags", hint: "Add your tags, separated by commas" %>
+          <%= f.input :tag_list, label: "Add tags", hint: "Add your tags, separated by commas" %>
+          <%= f.input :location %>
         </div>
         <div class="form-actions">
           <%= f.button :submit, "Save note", class: "btn-form" %>

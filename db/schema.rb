@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_06_145542) do
+ActiveRecord::Schema.define(version: 2020_07_08_085631) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -39,12 +39,13 @@ ActiveRecord::Schema.define(version: 2020_07_06_145542) do
   create_table "items", force: :cascade do |t|
     t.text "comment"
     t.text "content"
-    t.float "lat"
-    t.float "long"
+    t.float "latitude"
+    t.float "longitude"
     t.bigint "journey_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "type"
+    t.string "location", default: "Lisbon"
     t.index ["journey_id"], name: "index_items_on_journey_id"
   end
 

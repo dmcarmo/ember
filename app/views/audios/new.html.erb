@@ -5,6 +5,7 @@
       <%= simple_form_for [@journey,@audio], remote: true do |f| %>
         <%= f.input :audio_rec, as: :file %>
         <%= f.input :tag_list, label: "Add tags", hint: "Add your tags, separated by commas" %>
+        <%= f.input :location %>
         <%= f.submit 'Save', class: "btn-form"%>
       <% end %>
     </div>

@@ -8,6 +8,11 @@ require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
 import { clickOnFileUploader, saveChangedFile } from '../components/save_file_inputs';
+import { initMapbox } from '../plugins/init_mapbox';
+
+document.addEventListener('turbolinks:load', () => {
+  initMapbox();
+})
 
 clickOnFileUploader();
 saveChangedFile();

@@ -10,6 +10,7 @@
         <%= f.input :photo_attachment, as: :hidden,input_html: { placeholder: "Capture picture" } %>
         <%= image_tag "picture_placeholder.png", id: "img_prev", class: "photo-thumbnail", alt: "Journey Photo" %>
         <%= f.input :tag_list, label: "Add tags", hint: "Add your tags, separated by commas" %>
+        <%= f.input :location %>
         <%= f.submit 'Save', class: 'btn-form' %>
       <% end %>
     </div>
