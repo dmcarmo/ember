@@ -44,8 +44,9 @@ class JourneysController < ApplicationController
   end
 
   def main
-    @current_journey = policy_scope(Journey).last
-    authorize @current_journey
+    # @current_journey = policy_scope(Journey).last
+    # authorize @current_journey
+    authorize(Journey)
   end
 
   private
