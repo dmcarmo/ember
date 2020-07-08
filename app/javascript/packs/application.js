@@ -9,6 +9,12 @@ require("@rails/activestorage").start()
 require("channels")
 import { clickOnFileUploader, saveChangedFile } from '../components/save_file_inputs';
 import { stickyNavbar } from '../components/sticky_navbar';
+import { initMapbox } from '../plugins/init_mapbox';
+
+document.addEventListener('turbolinks:load', () => {
+  initMapbox();
+})
+
 
 clickOnFileUploader();
 saveChangedFile();

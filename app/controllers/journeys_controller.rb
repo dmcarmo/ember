@@ -1,6 +1,7 @@
 class JourneysController < ApplicationController
 
   before_action :set_journey, only: [:show, :edit, :update, :destroy]
+  skip_after_action :verify_authorized, only: [:map]
 
   def index
     @journeys = policy_scope(Journey)
@@ -19,6 +20,17 @@ class JourneysController < ApplicationController
   end
 
   def update
+  end
+
+  def map
+    @items = Item.geocoded # returns flats with coordinates
+
+    @markers = @items.map do |item|
+      {
+        lat: item.latitude,
+        lng: item.longitude
+      }
+    end
   end
 
   def create

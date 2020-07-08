@@ -9,6 +9,7 @@
           label: 'Capture audio' %>
         <%= f.input :audio_rec_attachment, as: :hidden,input_html: { placeholder: "Capture audio" } %>
         <%= f.input :tag_list, label: "Add tags", hint: "Add your tags, separated by commas" %>
+        <%= f.input :location %>
         <%= f.submit 'Save', class: "btn-form"%>
       <% end %>
     </div>

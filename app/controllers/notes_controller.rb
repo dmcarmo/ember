@@ -10,6 +10,10 @@ class NotesController < ItemsController
     @note = Note.new(note_params)
     @journey = Journey.find(params[:journey_id])
     @note.journey = @journey
+    if @note.location == "Lisbon"
+      @note.latitude = 38.7077507
+      @note.longitude = -9.13655919
+    end
     @note.save
     authorize @note
     redirect_to main_journeys_path, notice: "Note saved"
@@ -18,6 +22,6 @@ class NotesController < ItemsController
   private
 
   def note_params
-    params.require(:note).permit(:name, :comment, :content, :tag_list)
+    params.require(:note).permit(:name, :comment, :content, :tag_list, :location)
   end
 end

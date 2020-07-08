@@ -8,7 +8,7 @@
       <li>
         <%= link_to main_journeys_path, class: "#{'active' if controller_name == 'journeys' && action_name == 'main' || action_name == 'new'}" do %><i class="fab fa-gripfire" style="font-size: 23px;"></i><% end %></li>
       <li>
-        <%= link_to journeys_path, class: "#{'active' if controller_name == 'journeys' && action_name == 'map'}" do %><i class="fas fa-globe-europe"></i><% end %></li>
+        <%= link_to map_journeys_path, class: "#{'active' if controller_name == 'journeys' && action_name == 'map'}" do %><i class="fas fa-globe-europe"></i><% end %></li>
 
       <li class="nav-item dropdown">
         <%= icon('fas', 'cog', class: "avatar", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false) %>
