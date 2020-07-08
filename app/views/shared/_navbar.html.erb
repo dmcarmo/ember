@@ -10,7 +10,7 @@
       <li>
         <%= link_to map_journeys_path, class: "#{'active' if controller_name == 'journeys' && action_name == 'map'}" do %><i class="fas fa-globe-europe"></i><% end %></li>
 
-      <li class="nav-item dropdown">
+      <li class="nav-item dropdown <%= 'active' if devise_controller? %>">
         <%= icon('fas', 'cog', class: "avatar", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false) %>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
             <%= link_to "Edit user", edit_user_registration_path, class: "dropdown-item" %>
