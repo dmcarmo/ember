@@ -49,7 +49,7 @@ journey_6 = Journey.create!(user: ashley, title: "Kenya", start_date: Time.parse
 journey_7 = Journey.create!(user: ashley, title: "Georgia & Armenia", start_date: Time.parse("Sep 3 2019 9:00"), end_date: Time.parse("Jun 30 2020 9:00") )
 journey_8 = Journey.create!(user: ashley, title: "Korea", start_date: Time.parse("Apr 28 2015 9:00"), end_date: Time.parse("Jun 30 2020 9:00") )
 journey_9 = Journey.create!(user: ashley, title: "Rwanda & Uganda", start_date: Time.parse("Sep 6 2017 9:00"), end_date: Time.parse("Jun 30 2020 9:00") )
-journey_10 = Journey.create!(user: ashley, title: "Dubai", start_date: Time.parse("Okt 7 2016 9:00"), end_date: Time.parse("Jun 30 2020 9:00") )
+journey_10 = Journey.create!(user: ashley, title: "Dubai", start_date: Time.parse("Oct 7 2016 9:00"), end_date: Time.parse("Jun 30 2020 9:00") )
 
 puts "Finished!"
 
