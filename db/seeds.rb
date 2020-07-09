@@ -129,7 +129,7 @@ picture_15 = Picture.new( journey: journey_11, location: "Abu Dhabi, Vereinigte 
 file = URI.open("https://res.cloudinary.com/doh7xoars/image/upload/v1594224636/ember/seed/zbcateyc4g2kp2ytarbjvh7o455i.jpg")
 picture_15.photo.attach(io: file, filename: 'picture_1.jpg', content_type: 'image/jpeg')
 picture_15.save!
-item_13 = Note.create!(content: "Suad - driver +971 345 2359485", comment: "", journey: 1, location: "Al-Ain, Vereinigte Arabische Emirate" )
+item_13 = Note.create!(content: "Suad - driver +971 345 2359485", comment: "", journey: journey_11, location: "Al-Ain, Vereinigte Arabische Emirate" )
 picture_16 = Picture.new( journey: journey_11, location: "Sweihan, Vereinigte Arabische Emirate" )
 file = URI.open("https://res.cloudinary.com/doh7xoars/image/upload/v1594234248/ember/seed/khkh04t692fgedwd9dka3mwgfjig.jpg")
 picture_16.photo.attach(io: file, filename: 'picture_1.jpg', content_type: 'image/jpeg')
