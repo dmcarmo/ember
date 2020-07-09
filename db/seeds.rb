@@ -169,11 +169,11 @@ file = URI.open("https://res.cloudinary.com/doh7xoars/image/upload/v1594232236/e
 picture_24.photo.attach(io: file, filename: 'picture_1.jpg', content_type: 'image/jpeg')
 picture_24.save!
 picture_25 = Picture.new( journey: journey_9, location: "Kabale, Uganda" )
-file = URI.opicture_18pen("https://res.cloudinary.com/doh7xoars/image/upload/v1594231768/ember/seed/kdnhcd2ahz6gvz81wg2pgmlf229q.jpg")
+file = URI.open("https://res.cloudinary.com/doh7xoars/image/upload/v1594231768/ember/seed/kdnhcd2ahz6gvz81wg2pgmlf229q.jpg")
 picture_25.photo.attach(io: file, filename: 'picture_1.jpg', content_type: 'image/jpeg')
 picture_25.save!
 picture_26 = Picture.new( journey: journey_9, location: "Makole, Uganda" )
-file = URI.opicture_18pen("https://res.cloudinary.com/doh7xoars/image/upload/v1594231712/ember/seed/uqysjqr7q00gkq4zle1ze33h92op.jpg")
+file = URI.open("https://res.cloudinary.com/doh7xoars/image/upload/v1594231712/ember/seed/uqysjqr7q00gkq4zle1ze33h92op.jpg")
 picture_26.photo.attach(io: file, filename: 'picture_1.jpg', content_type: 'image/jpeg')
 picture_26.save!
 #Korea
