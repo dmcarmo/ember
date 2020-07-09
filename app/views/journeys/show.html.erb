@@ -21,7 +21,7 @@
           <div data-toggle="modal" data-target="#exampleModalCenter<%= item.id %>">
 
             <% if item.type == "Picture" %>
-              <%= cl_image_tag item.photo.key, class: "photo" %>
+              <%= cl_image_tag item.photo.key, transformation: [{quality: "auto"}], class: "photo" %>
             <% elsif item.type == "Video" %>
               <p>VIDEO</p>
               <%= cl_video_tag item.video_rec.key, class: "photo" %>

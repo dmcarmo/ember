@@ -5,14 +5,14 @@
       <div type="button" class=" item-close" data-dismiss="modal" aria-label="Close">
         <span aria-hidden="true">&times;</span>
       </div>
-        <div class="modal-body">
-         <%= simple_form_for item, url: item_path(item) do |f| %>
-        <div class="form-inputs">
-          <%= f.input :tag_list, label: "Add tags", hint: "Add your tags, separated by commas" %>
-        </div>
-        <div class="form-actions">
-          <%= f.button :submit, "Save tags", class: "btn-form" %>
-        </div>
+      <div class="modal-body">
+        <%= simple_form_for item, url: item_path(item) do |f| %>
+          <div class="form-inputs">
+            <%= f.input :tag_list, label: "Add tags", hint: "Add your tags, separated by commas" %>
+          </div>
+          <div class="form-actions">
+            <%= f.button :submit, "Save tags", class: "btn-form" %>
+          </div>
         <% end %>
       </div>
     </div>
