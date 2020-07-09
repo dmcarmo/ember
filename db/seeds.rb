@@ -49,7 +49,11 @@ journey_6 = Journey.create!(user: ashley, title: "Kenya", start_date: Time.parse
 journey_7 = Journey.create!(user: ashley, title: "Georgia & Armenia", start_date: Time.parse("Sep 3 2019 9:00"), end_date: Time.parse("Jun 30 2020 9:00") )
 journey_8 = Journey.create!(user: ashley, title: "Korea", start_date: Time.parse("Apr 28 2015 9:00"), end_date: Time.parse("Jun 30 2020 9:00") )
 journey_9 = Journey.create!(user: ashley, title: "Rwanda & Uganda", start_date: Time.parse("Sep 6 2017 9:00"), end_date: Time.parse("Jun 30 2020 9:00") )
-journey_10 = Journey.create!(user: ashley, title: "Dubai", start_date: Time.parse("Oct 7 2016 9:00"), end_date: Time.parse("Jun 30 2020 9:00") )
+journey_11 = Journey.create!(user: ashley, title: "Dubai", start_date: Time.parse("Oct 7 2016 9:00"), end_date: Time.parse("Jun 30 2020 9:00") )
+journey_12 = Journey.create!(user: ashley, title: "Istanbul", start_date: Time.parse("Oct 23 2015 9:00"), end_date: Time.parse("Jun 30 2020 9:00") )
+journey_13 = Journey.create!(user: ashley, title: "Israel", start_date: Time.parse("Apr 12 2018 9:00"), end_date: Time.parse("Jun 30 2020 9:00") )
+journey_14 = Journey.create!(user: ashley, title: "Rom", start_date: Time.parse("Sep 4 2019 9:00"), end_date: Time.parse("Jun 30 2020 9:00") )
+journey_15 = Journey.create!(user: ashley, title: "Marocco", start_date: Time.parse("Nov 31 2008 9:00"), end_date: Time.parse("Jun 30 2020 9:00") )
 
 puts "Finished!"
 
@@ -224,14 +228,48 @@ picture_35 = Picture.new( journey: journey_7, location: "Stepanzminda, Georgien"
 file = URI.open("https://res.cloudinary.com/doh7xoars/image/upload/v1594225717/ember/seed/bw8z1tgdz8w9ixcbim50z9do8txo.jpg")
 picture_35.photo.attach(io: file, filename: 'picture_1.jpg', content_type: 'image/jpeg')
 picture_35.save!
-picture_36 = Picture.new( journey: journey_7, location: "Bolnissi, Georgien" )
-file = URI.open("https://res.cloudinary.com/doh7xoars/image/upload/v1594225851/ember/seed/b6ams8o1pzyjub72htggt4xldsr6.jpg")
+#Istanbul
+picture_36 = Picture.new( journey: journey_12, location: "Istanbul, Turkey" )
+file = URI.open("https://www.dropbox.com/s/ej2emg1ysy0szk2/2019-07-19%2011.41.19.jpg?dl=0")
 picture_36.photo.attach(io: file, filename: 'picture_1.jpg', content_type: 'image/jpeg')
 picture_36.save!
-picture_37 = Picture.new( journey: journey_7, location: "Rustawi, Georgien" )
-file = URI.open("https://res.cloudinary.com/doh7xoars/image/upload/v1594226963/ember/seed/q53vj4rjdhlferwwbb5r7asa7acg.jpg")
+picture_37 = Picture.new( journey: journey_12, location: "Maslak, Turkey" )
+file = URI.open("https://www.dropbox.com/s/we5c4j6walk022o/2019-07-19%2012.30.05-2.jpg?dl=0")
 picture_37.photo.attach(io: file, filename: 'picture_1.jpg', content_type: 'image/jpeg')
 picture_37.save!
+item_24 = Note.create!(content: "Crazy Bar & Staff,  Apa Nef, Ali Kaya Sokak No.3 Kat B1, 34330 Levent", comment: "", journey: journey_12, location: "Ankara, Turkey" )
+item_25= Note.create!(content: "Nokta Sebzeli ...Dönner, Dönner", comment: "", journey: journey_12, location: "Antalya, Turkey" )
+item_26= Note.create!(content: "Mustafa, guide, +90 530-539 561", comment: "", journey: journey_12, location: "Bodrum, Turkey" )
+#Israel
+item_27 = Note.create!(content: "Besarabia Bar  .... excellent hummus", comment: "", journey: journey_13, location: "Tel Aviv, Israel" )
+item_28 = Note.create!(content: "Night out in Israel: Teder, HaMinzar, Uganda, October, Kuli Alma", comment: "", journey: journey_13, location: "Tel Aviv, Namibia" )
+item_29 = Note.create!(content: "Bethlem Experience - ask for David", comment: "", journey: journey_13, location: "Jerusalem, Namibia" )
+#Rom
+picture_38 = Picture.new( journey: journey_14, location: "Rom, Italy" )
+file = URI.open("https://www.dropbox.com/s/ery13cipe5xozg8/2019-10-10%2013.30.37.jpg?dl=0")
+picture_38.photo.attach(io: file, filename: 'picture_1.jpg', content_type: 'image/jpeg')
+picture_38.save!
+item_30 = Note.create!(content: "Otello ... tiramisu, tiramisu, tiramisu", comment: "", journey: journey_14, location: "Napoli, Italy" )
+picture_39 = Picture.new( journey: journey_14, location: "Mailand, Italy" )
+file = URI.open("https://www.dropbox.com/s/la29be3wa5r5x2e/2019-10-11%2011.43.23.jpg?dl=0")
+picture_39.photo.attach(io: file, filename: 'picture_1.jpg', content_type: 'image/jpeg')
+picture_39.save!
+item_31 = Note.create!(content: "Maranica - world-famous graffiti artists painted 22 houses", comment: "", journey: journey_14, location: "Damaraland, Namibia" )
+item_32 = Note.create!(content: "Cardorna Center, Via Metastasio 3, Milan", comment: "", journey: journey_14, location: "Milan, Italy" )
+#Marocco
+picture_40 = Picture.new( journey: journey_15, location: "Marrakesh, Marocco" )
+file = URI.open("https://www.dropbox.com/s/sqljuw2q371m5k8/2017-01-05%2013.37.19.jpg?dl=0")
+picture_40.photo.attach(io: file, filename: 'picture_1.jpg', content_type: 'image/jpeg')
+picture_40.save!
+item_33 = Note.create!(content: "Dar Zellji", comment: "", journey: journey_15, location: "Casablanca, Marocco" )
+picture_41 = Picture.new( journey: journey_15, location: "Marrakesh, Marocco" )
+file = URI.open("https://www.dropbox.com/s/82dtmww1p527hyn/2017-01-05%2013.31.22.jpg?dl=0")
+picture_41.photo.attach(io: file, filename: 'picture_1.jpg', content_type: 'image/jpeg')
+picture_41.save!
+item_34 = Note.create!(content: "Tajine", comment: "", journey: journey_15, location: "Rabat, Marocco" )
+item_35 = Note.create!(content: "Erg Chigaga Luxury Desert Camp", comment: "", journey: journey_15, location: "Quarzazate, Marocco" )
+
+
 
 
 puts "Created #{Item.count} entries."
