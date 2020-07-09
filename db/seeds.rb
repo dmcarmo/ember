@@ -27,7 +27,7 @@ puts "Creating users..."
 heather = User.create!(username: "heather", email: "heather@email.com", password: "flosseveryday")
 sidd = User.create!(username: "sidd", email: "sidd@email.com", password: "wantaduck?")
 adriana = User.create!(username: "Adriana", email: "adriana@email.com", password: "learncode")
-ashley = User.create!(username: "Ashley", email: "ashley@email.com", password: "gogogo")
+ashley = User.create!(username: "David", email: "david@email.com", password: "123123123")
 
 puts "Finished!"
 
@@ -91,14 +91,14 @@ file = URI.open("https://res.cloudinary.com/doh7xoars/image/upload/v1594224372/e
 picture_8.photo.attach(io: file, filename: 'picture_1.jpg', content_type: 'image/jpeg')
 picture_8.save!
 item_8 = Note.create!(content: "Sorris Sorris Lodge - nine private villas in the rocky Damaraland, $$$ but worth every Dollar", comment: "", journey: journey_4, location: "Damaraland, Namibia" )
-item_7 = Note.create!(content: "Namibia breweries - private tours with John/ +264 61 320 4999", comment: "", journey: journey_4, location: "Windhoek, Namibia" )
+item_9 = Note.create!(content: "Namibia breweries - private tours with John/ +264 61 320 4999", comment: "", journey: journey_4, location: "Windhoek, Namibia" )
 #Bolivia
 picture_9 = Picture.new( journey: journey_5, location: "Salar de Uyuni, Bolivia" )
 file = URI.open("https://res.cloudinary.com/doh7xoars/image/upload/v1594223252/ember/seed/o6vtsc4j117qw56fo3nx5hn7fen4.jpg")
 picture_9.photo.attach(io: file, filename: 'picture_1.jpg', content_type: 'image/jpeg')
 picture_9.save!
-item_9 = Note.create!(content: "Alasitas Festival, month-long festival in honor to Ekeko the Aymara god of abundance ... should bring fortunate and happiness", comment: "", journey: journey_5, location: "Lake Titicaca, Bolivia" )
-item_10 = Note.create!(content: "Mocochinchi ... dehydrated peach cider - amazing taste", comment: "", journey: journey_5, location: "La Paz, Bolivia" )
+item_10 = Note.create!(content: "Alasitas Festival, month-long festival in honor to Ekeko the Aymara god of abundance ... should bring fortunate and happiness", comment: "", journey: journey_5, location: "Lake Titicaca, Bolivia" )
+item_11 = Note.create!(content: "Mocochinchi ... dehydrated peach cider - amazing taste", comment: "", journey: journey_5, location: "La Paz, Bolivia" )
 picture_10 = Picture.new( journey: journey_5, location: "Tupiza, Bolivia" )
 file = URI.open("https://res.cloudinary.com/doh7xoars/image/upload/v1594223001/ember/seed/rw7c1fwk06f7s1guv998nxkq9ncq.jpg")
 picture_10.photo.attach(io: file, filename: 'picture_1.jpg', content_type: 'image/jpeg')
@@ -107,7 +107,7 @@ picture_11 = Picture.new( journey: journey_5, location: "Potosi, Bolivia" )
 file = URI.open("https://res.cloudinary.com/doh7xoars/image/upload/v1594222771/ember/seed/g2l2xoicawu9yuloj7tl7rqjt9z1.jpg")
 picture_11.photo.attach(io: file, filename: 'picture_1.jpg', content_type: 'image/jpeg')
 picture_11.save!
-item_11 = Note.create!(content: "Alpaca hostel, Cochabamba ... nice view from the second floor, room 10", comment: "", journey: journey_5, location: "Cochabamba, Bolivia" )
+item_12 = Note.create!(content: "Alpaca hostel, Cochabamba ... nice view from the second floor, room 10", comment: "", journey: journey_5, location: "Cochabamba, Bolivia" )
 picture_12 = Picture.new( journey: journey_5, location: "Potosi, Bolivia" )
 file = URI.open("https://res.cloudinary.com/doh7xoars/image/upload/v1594222589/ember/seed/zysaybpp1gobxdhladri7ky2kkp7.jpg")
 picture_12.photo.attach(io: file, filename: 'picture_1.jpg', content_type: 'image/jpeg')
@@ -125,23 +125,23 @@ picture_15 = Picture.new( journey: journey_10, location: "Abu Dhabi, Vereinigte 
 file = URI.open("https://res.cloudinary.com/doh7xoars/image/upload/v1594224636/ember/seed/zbcateyc4g2kp2ytarbjvh7o455i.jpg")
 picture_15.photo.attach(io: file, filename: 'picture_1.jpg', content_type: 'image/jpeg')
 picture_15.save!
-item_7 = Note.create!(content: "Suad - driver +971 345 2359485", comment: "", journey: journey_10, location: "Al-Ain, Vereinigte Arabische Emirate" )
+item_13 = Note.create!(content: "Suad - driver +971 345 2359485", comment: "", journey: journey_10, location: "Al-Ain, Vereinigte Arabische Emirate" )
 picture_16 = Picture.new( journey: journey_10, location: "Sweihan, Vereinigte Arabische Emirate" )
 file = URI.open("https://res.cloudinary.com/doh7xoars/image/upload/v1594234248/ember/seed/khkh04t692fgedwd9dka3mwgfjig.jpg")
 picture_16.photo.attach(io: file, filename: 'picture_1.jpg', content_type: 'image/jpeg')
 picture_16.save!
-item_8 = Note.create!(content: "Bu Tafish - best seafood in Schardscha", comment: "", journey: journey_10, location: "Schardscha, Vereinigte Arabische Emirate" )
-item_7 = Note.create!(content: "Hatta ... great for sunset", comment: "", journey: journey_10, location: "Hatta, Vereinigte Arabische Emirate" )
+item_14 = Note.create!(content: "Bu Tafish - best seafood in Schardscha", comment: "", journey: journey_10, location: "Schardscha, Vereinigte Arabische Emirate" )
+item_15 = Note.create!(content: "Hatta ... great for sunset", comment: "", journey: journey_10, location: "Hatta, Vereinigte Arabische Emirate" )
 picture_17 = Picture.new( journey: journey_10, location: "Sweihan, Vereinigte Arabische Emirate" )
 file = URI.open("https://res.cloudinary.com/doh7xoars/image/upload/v1594224372/ember/seed/oax2rr3fxxrgz3du2h3h56fbf28m.jpg")
 picture_17.photo.attach(io: file, filename: 'picture_1.jpg', content_type: 'image/jpeg')
 picture_17.save!
 picture_18 = Picture.new( journey: journey_10, location: "Sweihan, Vereinigte Arabische Emirate" )
-file = URI.opicture_18pen("https://res.cloudinary.com/doh7xoars/image/upload/v1594234025/ember/seed/hwmm85qlcnddb645v4va48ilangq.jpg")
+file = URI.open("https://res.cloudinary.com/doh7xoars/image/upload/v1594234025/ember/seed/hwmm85qlcnddb645v4va48ilangq.jpg")
 picture_18.photo.attach(io: file, filename: 'picture_1.jpg', content_type: 'image/jpeg')
 picture_18.save!
 picture_19 = Picture.new( journey: journey_10, location: "Sweihan, Vereinigte Arabische Emirate" )
-file = URI.opicture_18pen("https://res.cloudinary.com/doh7xoars/image/upload/v1594233438/ember/seed/1zpcu4rusdr8uwzs2k7vhy6h7oy0.jpg")
+file = URI.open("https://res.cloudinary.com/doh7xoars/image/upload/v1594233438/ember/seed/1zpcu4rusdr8uwzs2k7vhy6h7oy0.jpg")
 picture_19.photo.attach(io: file, filename: 'picture_1.jpg', content_type: 'image/jpeg')
 picture_19.save!
 #Rwanda&Uganda
@@ -162,8 +162,8 @@ picture_23 = Picture.new( journey: journey_9, location: "Ndeke, Uganda" )
 file = URI.open("https://res.cloudinary.com/doh7xoars/image/upload/v1594232336/ember/seed/139pdq3n8lykyreacw2ee3d9gmp9.jpg")
 picture_23.photo.attach(io: file, filename: 'picture_1.jpg', content_type: 'image/jpeg')
 picture_23.save!
-item_13 = Note.create!(content: "Boat to Entebbe, $12", comment: "", journey: journey_9, location: "Bukoba, Uganda" )
-item_14 = Note.create!(content: "Gorilla trek Congo, ask at Lilly's place in Kigali, save & good service", comment: "", journey: journey_9, location: "Kigali, Rwanda" )
+item_16 = Note.create!(content: "Boat to Entebbe, $12", comment: "", journey: journey_9, location: "Bukoba, Uganda" )
+item_17 = Note.create!(content: "Gorilla trek Congo, ask at Lilly's place in Kigali, save & good service", comment: "", journey: journey_9, location: "Kigali, Rwanda" )
 picture_24 = Picture.new( journey: journey_9, location: "Ngoma, Rwanda" )
 file = URI.open("https://res.cloudinary.com/doh7xoars/image/upload/v1594232236/ember/seed/v1kxuhgymgguweertndp6zmhaey4.jpg")
 picture_24.photo.attach(io: file, filename: 'picture_1.jpg', content_type: 'image/jpeg')
@@ -189,13 +189,13 @@ picture_29 = Picture.new( journey: journey_8, location: "Incheon, Korea" )
 file = URI.open("https://res.cloudinary.com/doh7xoars/image/upload/v1594230559/ember/seed/yeab01n5wviwss63ruylh9ysk4qv.jpg")
 picture_29.photo.attach(io: file, filename: 'picture_1.jpg', content_type: 'image/jpeg')
 picture_29.save!
-item_15 = Note.create!(content: "", comment: "", journey: journey_8, location: "Busan, Korea" )
+item_18 = Note.create!(content: "", comment: "", journey: journey_8, location: "Busan, Korea" )
 picture_30 = Picture.new( journey: journey_8, location: "Seoul, Korea" )
 file = URI.open("https://res.cloudinary.com/doh7xoars/image/upload/v1594229960/ember/seed/gawi9qjexnr1cqrk8aywqr0al1dg.jpg")
 picture_30.photo.attach(io: file, filename: 'picture_1.jpg', content_type: 'image/jpeg')
 picture_30.save!
-item_16 = Note.create!(content: "Kopo 2 Pi - BBQ place, must eat: Bulgogi, Galbi & Spicy grilled chicken", comment: "", journey: journey_8, location: "Pohang, Korea" )
-item_17 = Note.create!(content: "Omija-cha & Yuluma-cha from Jujube tea", comment: "", journey: journey_8, location: "Busan, Korea" )
+item_19 = Note.create!(content: "Kopo 2 Pi - BBQ place, must eat: Bulgogi, Galbi & Spicy grilled chicken", comment: "", journey: journey_8, location: "Pohang, Korea" )
+item_20 = Note.create!(content: "Omija-cha & Yuluma-cha from Jujube tea", comment: "", journey: journey_8, location: "Busan, Korea" )
 #BGeorgia & Armenia
 picture_31 = Picture.new( journey: journey_7, location: "Ganja, Georgien" )
 file = URI.open("https://res.cloudinary.com/doh7xoars/image/upload/v1594229220/ember/seed/1qukv6rcshgr59oik31la4s6yplr.jpg")
@@ -213,23 +213,23 @@ video_2 = Video.new( journey: journey_7, location: "Jerawan, Armenia" )
 file = URI.open("https://res.cloudinary.com/doh7xoars/video/upload/v1594227398/ember/seed/0srcs9ex1fvu0btcnai6pgulyrz1.mov")
 video_2.video_rec.attach(io: file, filename: 'video_1.mp4', content_type: 'video/mp4')
 video_2.save!
-item_18 = Note.create!(content: "Climbing lions in the tree, Queen Elizabeth National Park", comment: "", journey: journey_7, location: "Katojo, Uganda" )
+item_21 = Note.create!(content: "Climbing lions in the tree, Queen Elizabeth National Park", comment: "", journey: journey_7, location: "Katojo, Uganda" )
 picture_34 = Picture.new( journey: journey_7, location: "Gudauri, Georgien" )
 file = URI.open("https://res.cloudinary.com/doh7xoars/image/upload/v1594226421/ember/seed/z4xmhoj3tslryr1j0kvg8kinsp6v.jpg")
 picture_34.photo.attach(io: file, filename: 'picture_1.jpg', content_type: 'image/jpeg')
 picture_34.save!
-item_19 = Note.create!(content: "Chatschapuri, Restaurant Alazani near the church", comment: "", journey: journey_7, location: "Ananuri, Georgien" )
-item_20 = Note.create!(content: "Chacha - georgian brandy, sometimes the call it wine vodka ... Binekhi ist the best one", comment: "", journey: journey_7, location: "Sighnaghi, Georgien" )
+item_22 = Note.create!(content: "Chatschapuri, Restaurant Alazani near the church", comment: "", journey: journey_7, location: "Ananuri, Georgien" )
+item_23 = Note.create!(content: "Chacha - georgian brandy, sometimes the call it wine vodka ... Binekhi ist the best one", comment: "", journey: journey_7, location: "Sighnaghi, Georgien" )
 picture_35 = Picture.new( journey: journey_7, location: "Stepanzminda, Georgien" )
 file = URI.open("https://res.cloudinary.com/doh7xoars/image/upload/v1594225717/ember/seed/bw8z1tgdz8w9ixcbim50z9do8txo.jpg")
 picture_35.photo.attach(io: file, filename: 'picture_1.jpg', content_type: 'image/jpeg')
 picture_35.save!
 picture_36 = Picture.new( journey: journey_7, location: "Bolnissi, Georgien" )
-file = URI.opicture_18pen("https://res.cloudinary.com/doh7xoars/image/upload/v1594225851/ember/seed/b6ams8o1pzyjub72htggt4xldsr6.jpg")
+file = URI.open("https://res.cloudinary.com/doh7xoars/image/upload/v1594225851/ember/seed/b6ams8o1pzyjub72htggt4xldsr6.jpg")
 picture_36.photo.attach(io: file, filename: 'picture_1.jpg', content_type: 'image/jpeg')
 picture_36.save!
 picture_37 = Picture.new( journey: journey_7, location: "Rustawi, Georgien" )
-file = URI.opicture_18pen("https://res.cloudinary.com/doh7xoars/image/upload/v1594226963/ember/seed/q53vj4rjdhlferwwbb5r7asa7acg.jpg")
+file = URI.open("https://res.cloudinary.com/doh7xoars/image/upload/v1594226963/ember/seed/q53vj4rjdhlferwwbb5r7asa7acg.jpg")
 picture_37.photo.attach(io: file, filename: 'picture_1.jpg', content_type: 'image/jpeg')
 picture_37.save!
 
