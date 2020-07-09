@@ -1,44 +1,38 @@
 <!-- Modal -->
 <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-body">
-      <div type="button" class="item-close" style="text-align: right;" data-dismiss="modal" aria-label="Close">
-        <span aria-hidden="true" >&times;</span>
-      </div>
-        <br>
-        <br>
-      <div class="row">
-        <div class="col-12 ">
-          <%= form_tag journeys_path, method: :get do %>
-          <%= text_field_tag :query,
-                        params[:query],
-                        class: "form-control",
-                        placeholder: "Search for journeys?"%>
-          <br>
-          <div class="center">
-          <%= submit_tag "Search", class: "btn btn-form" %>
-          <% end %>
-          </div>
-          <br>
-          <br>
-          <br>
-        </div>
-
-        <div class="modal-body" style="height: 60px;">
-          <%= form_tag items_path, method: :get do %>
-          <%= text_field_tag :search_tag,
-                      params[:search_tag],
-                      class: "form-control",
-                      placeholder: "Search for tags?"%>
-          <br>
-           <div class="center">
-          <%= submit_tag "Search", class: "btn btn-form" %>
-          <% end %>
-
+    <div class="modal-content">
+      <div class="modal-header">
+        <div type="button" class="item-close" data-dismiss="modal" style="text-align: right;" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
         </div>
       </div>
+      <div class="modal-body">
+        <%= form_tag journeys_path, method: :get do %>
+        <%= text_field_tag :query,
+        params[:query],
+        class: "form-control",
+        placeholder: "Search for journeys?"
+        %>
+        <br>
+        <div class="center">
+          <%= submit_tag "Search", class: "btn btn-form" %>
+          <% end %>
+        </div>
+        <br>
+        <br>
+        <%= form_tag items_path, method: :get do %>
+        <%= text_field_tag :search_tag,
+        params[:search_tag],
+        class: "form-control",
+        placeholder: "Search for tags?"
+        %>
+        <br>
+        <div class="center">
+          <%= submit_tag "Search", class: "btn btn-form" %>
+          <% end %>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
-</div>
-</div>
-
