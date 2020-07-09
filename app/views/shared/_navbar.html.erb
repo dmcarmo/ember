@@ -1,7 +1,7 @@
   <div class="navbar-ember fixed-top" id="navbar">
     <ul>
       <li>
-        <%= link_to journeys_path, class: "#{'active' if controller_name == 'journeys' && action_name == 'index'}" do %>
+        <%= link_to journeys_path, class: "#{'active' if controller_name == 'journeys' && action_name == 'index' || action_name == 'show'}" do %>
         <i class="far fa-image" style="font-size: 20px;"></i><% end %></li>
       <li>
         <%= link_to journeys_path, data: { toggle: "modal", target: "#exampleModalCenter" } do %><i class="fas fa-search"></i><% end %></li>
