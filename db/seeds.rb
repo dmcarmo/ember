@@ -117,34 +117,34 @@ file = URI.open("https://res.cloudinary.com/doh7xoars/image/upload/v1594222589/e
 picture_12.photo.attach(io: file, filename: 'picture_1.jpg', content_type: 'image/jpeg')
 picture_12.save!
 #Dubai
-picture_13 = Picture.new( journey: journey_10, location: "Abu Dhabi, Vereinigte Arabische Emirate" )
+picture_13 = Picture.new( journey: journey_11, location: "Abu Dhabi, Vereinigte Arabische Emirate" )
 file = URI.open("https://res.cloudinary.com/doh7xoars/image/upload/v1594234604/ember/seed/zjiwxppqf04y10u58dg0f0a2ffmw.jpg")
 picture_13.photo.attach(io: file, filename: 'picture_1.jpg', content_type: 'image/jpeg')
 picture_13.save!
-picture_14 = Picture.new( journey: journey_10, location: "Abu Dhabi, Vereinigte Arabische Emirate" )
+picture_14 = Picture.new( journey: journey_11, location: "Abu Dhabi, Vereinigte Arabische Emirate" )
 file = URI.open("https://res.cloudinary.com/doh7xoars/image/upload/v1594234547/ember/seed/hrwc4bxorrqxdm2112i3f1f4ng2a.jpg")
 picture_14.photo.attach(io: file, filename: 'picture_1.jpg', content_type: 'image/jpeg')
 picture_14.save!
-picture_15 = Picture.new( journey: journey_10, location: "Abu Dhabi, Vereinigte Arabische Emirate" )
+picture_15 = Picture.new( journey: journey_11, location: "Abu Dhabi, Vereinigte Arabische Emirate" )
 file = URI.open("https://res.cloudinary.com/doh7xoars/image/upload/v1594224636/ember/seed/zbcateyc4g2kp2ytarbjvh7o455i.jpg")
 picture_15.photo.attach(io: file, filename: 'picture_1.jpg', content_type: 'image/jpeg')
 picture_15.save!
-item_13 = Note.create!(content: "Suad - driver +971 345 2359485", comment: "", journey: journey_10, location: "Al-Ain, Vereinigte Arabische Emirate" )
-picture_16 = Picture.new( journey: journey_10, location: "Sweihan, Vereinigte Arabische Emirate" )
+item_13 = Note.create!(content: "Suad - driver +971 345 2359485", comment: "", journey: 1, location: "Al-Ain, Vereinigte Arabische Emirate" )
+picture_16 = Picture.new( journey: journey_11, location: "Sweihan, Vereinigte Arabische Emirate" )
 file = URI.open("https://res.cloudinary.com/doh7xoars/image/upload/v1594234248/ember/seed/khkh04t692fgedwd9dka3mwgfjig.jpg")
 picture_16.photo.attach(io: file, filename: 'picture_1.jpg', content_type: 'image/jpeg')
 picture_16.save!
-item_14 = Note.create!(content: "Bu Tafish - best seafood in Schardscha", comment: "", journey: journey_10, location: "Schardscha, Vereinigte Arabische Emirate" )
-item_15 = Note.create!(content: "Hatta ... great for sunset", comment: "", journey: journey_10, location: "Hatta, Vereinigte Arabische Emirate" )
-picture_17 = Picture.new( journey: journey_10, location: "Sweihan, Vereinigte Arabische Emirate" )
+item_14 = Note.create!(content: "Bu Tafish - best seafood in Schardscha", comment: "", journey: journey_11, location: "Schardscha, Vereinigte Arabische Emirate" )
+item_15 = Note.create!(content: "Hatta ... great for sunset", comment: "", journey: journey_11, location: "Hatta, Vereinigte Arabische Emirate" )
+picture_17 = Picture.new( journey: journey_11, location: "Sweihan, Vereinigte Arabische Emirate" )
 file = URI.open("https://res.cloudinary.com/doh7xoars/image/upload/v1594224372/ember/seed/oax2rr3fxxrgz3du2h3h56fbf28m.jpg")
 picture_17.photo.attach(io: file, filename: 'picture_1.jpg', content_type: 'image/jpeg')
 picture_17.save!
-picture_18 = Picture.new( journey: journey_10, location: "Sweihan, Vereinigte Arabische Emirate" )
+picture_18 = Picture.new( journey: journey_11, location: "Sweihan, Vereinigte Arabische Emirate" )
 file = URI.open("https://res.cloudinary.com/doh7xoars/image/upload/v1594234025/ember/seed/hwmm85qlcnddb645v4va48ilangq.jpg")
 picture_18.photo.attach(io: file, filename: 'picture_1.jpg', content_type: 'image/jpeg')
 picture_18.save!
-picture_19 = Picture.new( journey: journey_10, location: "Sweihan, Vereinigte Arabische Emirate" )
+picture_19 = Picture.new( journey: journey_11, location: "Sweihan, Vereinigte Arabische Emirate" )
 file = URI.open("https://res.cloudinary.com/doh7xoars/image/upload/v1594233438/ember/seed/1zpcu4rusdr8uwzs2k7vhy6h7oy0.jpg")
 picture_19.photo.attach(io: file, filename: 'picture_1.jpg', content_type: 'image/jpeg')
 picture_19.save!
