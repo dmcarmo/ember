@@ -8,7 +8,7 @@
           <%= link_to journey_path(journey) do %>
             <div class="card-body">
               <h3 class="card-title" style = "text-transform:capitalize;"><%= journey.title %></h3>
-              <p class="card-text" style = "text-transform:capitalize;"> started <%= time_ago_in_words journey.start_date %> ago.</p>
+              <p class="card-text"> <%= time_ago_in_words journey.start_date %> ago </p>
               <!--  <%= link_to "See Journey", journey_path(journey) %> -->
             </div>
           <% end %>
