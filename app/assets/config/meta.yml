@@ -1,0 +1,5 @@
+meta_product_name: "ember"
+meta_title: "ember - Remember the little things, while focusing on the big."
+meta_description: "We want to help you capture small memories quickly, so you can spend your time making the bigger memories."
+meta_image: "cover.png" # should exist in `app/assets/images/`
+twitter_account: "@product_twitter_account"   # required for Twitter Cards
