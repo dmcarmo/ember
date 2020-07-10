@@ -38,9 +38,9 @@
 }
 
 .center {
+  display: flex;
   margin: auto;
-  padding-left: 110px;
-  align-items: center;
+  justify-content: center;
 }
 
 .form-layer {
