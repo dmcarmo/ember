@@ -1,20 +1,20 @@
 <div class="container">
   <div class="position" style="padding-top: 40px;">
     <div class="form-layer">
-        <br>
-    <h3>Create a new journey</h3>
-    <%= simple_form_for @journey do |f| %>
-      <div class="form-inputs">
-        <%= f.input :title %>
-      </div>
       <br>
-      <div class="form-actions">
-        <div class="center">
-          <%= f.button :submit, "Save journey", class: "btn-form" %>
+      <h3>Create a new journey</h3>
+      <%= simple_form_for @journey do |f| %>
+        <div class="form-inputs">
+          <%= f.input :title %>
         </div>
         <br>
-      </div>
-    <% end %>
+        <div class="form-actions">
+          <div class="center">
+            <%= f.button :submit, "Save journey", class: "btn-form" %>
+          </div>
+          <br>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>
