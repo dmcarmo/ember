@@ -8,7 +8,19 @@
         </div>
 
       <div class="modal-body">
-        <%= render partial: 'items/item', locals: { item: item } %>
+        <div class="card-body">
+          <% if item.type == "Picture" %>
+            <%= cl_image_tag item.photo.key, transformation: [{quality: "auto"}], class: "photo" %>
+          <% elsif item.type == "Video" %>
+            <%= cl_video_tag item.video_rec.key, transformation: [{quality: "auto"}], controls: true, class: "photo" %>
+          <% elsif item.type == "Audio" %>
+            <%= cl_video_tag item.audio_rec.key, transformation: [{quality: "auto"}], controls: true, class: "photo" %>
+          <% elsif item.type == "Note" %>
+            <div class="card-body">
+              <%= item.content %>
+            </div>
+          <% end %>
+        </div>
       </div>
     </div>
   </div>
