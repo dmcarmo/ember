@@ -7,7 +7,7 @@
     "@rails/ujs": "^6.0.0",
     "@rails/webpacker": "5.4.0",
     "bootstrap": "^4.5.0",
-    "chokidar": "^3.5.0",
+    "chokidar": "^3.5",
     "glob-parent": "^5.1.2",
     "is-svg": "^4.2.2",
     "jquery": "^3.5.1",
@@ -16,7 +16,8 @@
     "popper.js": "^1.16.1",
     "ssri": "^7.1.1",
     "trim-newlines": "^3.0.1",
-    "turbolinks": "^5.2.0"
+    "turbolinks": "^5.2.0",
+    "webpack": "^5"
   },
   "version": "0.1.0",
   "devDependencies": {
