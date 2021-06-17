@@ -7,13 +7,24 @@
     "@rails/ujs": "^6.0.0",
     "@rails/webpacker": "4.2.2",
     "bootstrap": "^4.5.0",
+    "chokidar": "^3.0.0",
+    "glob-parent": "^5.1.2",
+    "is-svg": "^4.2.2",
     "jquery": "^3.5.1",
     "mapbox-gl": "^1.11.1",
+    "normalize-url": "^4.5.1",
     "popper.js": "^1.16.1",
+    "ssri": "^7.1.1",
+    "trim-newlines": "^3.0.1",
     "turbolinks": "^5.2.0"
   },
   "version": "0.1.0",
   "devDependencies": {
-    "webpack-dev-server": "^3.11.0"
+    "node-forge": ">=0.10.0",
+    "serialize-javascript": ">=3.1.0",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "resolutions": {
+    "webpack-dev-server/chokidar": "^3"
   }
 }
