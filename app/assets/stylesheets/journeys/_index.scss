@@ -1,12 +1,19 @@
 .container {
+  position: relative;
+  top: var(--navbar-height);
   margin: auto;
-
+  padding: 15px;
 }
 
 .journeys-body {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
   position: relative;
-  background-repeat: none;
-  background-size: 100%;
+  top: var(--navbar-height);
+  // position: relative;
+  // background-repeat: none;
+  // background-size: 100%;
   min-height: calc(100vh - 69px);
 }
 
@@ -20,6 +27,9 @@
   background-size: cover;
 }
 
+.row {
+  justify-content: center;
+}
 
 .card {
   display: flex;
@@ -37,21 +47,23 @@ a:hover {
   color: rgba(255, 255, 255, 0.5);
 }
 
+#title {
+  display: flex;
+  justify-content: space-around;
+}
+
 h5 {
-  margin-left: 20px;
-  margin-top: 20px;
-  margin-bottom: 5px;
-  padding-top: 10px;
-  color:  rgba(250, 250, 250, 0.7);
-  padding-left: 40px;
-  padding-bottom: 10px;
+  margin: 15px;
+  padding: 10px;
+  text-align: center;
   border-radius: 10px;
-  background-color: rgba(27, 27, 27, 1);
-  width: 150px;
-  position: relative;
-  top: 17px;
-  left: 200px;
   box-shadow: inset 0 -7px 9px -7px rgba(0,0,0,0.8);
+  color:  rgba(250, 250, 250, 0.7);
+  background-color: rgba(27, 27, 27, 1);
+  // width: 150px;
+  // position: relative;
+  // top: 17px;
+  // left: 200px;
  }
 
 h4 {

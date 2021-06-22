@@ -4,18 +4,18 @@
 }
 
 .btn-form {
-  margin:auto;
+  margin: auto;
+  padding: none;
+  border-style: solid;
   border-color: rgba(255, 255, 255, 0.0);
   border-radius: 100px 100px 100px 100px;
   width: 160px;
   height: 40px;
-  color: rgba(120, 120, 120, 1);
   font-size: 16px;
-  border-style: solid;
-  background-color: rgba(173, 29, 99, 0.85);
+  color: rgba(120, 120, 120, 1);
   color: rgb(230, 230, 230);
+  background-color: rgba(173, 29, 99, 0.85);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  padding: none;
 }
 
 .signup-form {

@@ -1,15 +1,16 @@
 .main-button {
-  border-color: rgba(255, 255, 255, 0.0);
-  border-radius: 10px 10px 0px 0px;
   display: flex;
   width: 260px;
   height: 60px;
-  padding-top: 14px;
-  color: rgba(120, 120, 120, 1);
-  font-size: 19px;
+  // padding-top: 14px;
+  align-items: center;
   border-style: solid;
-  background-color: rgba(173, 29, 99, 0.7);
+  border-color: rgba(255, 255, 255, 0.0);
+  border-radius: 10px 10px 0px 0px;
+  color: rgba(120, 120, 120, 1);
   color: rgb(230, 230, 230);
+  font-size: 19px;
+  background-color: rgba(173, 29, 99, 0.7);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -20,13 +21,12 @@
 .row-main {
   display: flex;
   justify-content: center;
-  margin: auto;
+  margin: 15px 0px;
 }
 
 .position {
   position: relative;
   top: 150px;
-
 }
 
 .main-icons {
@@ -43,27 +43,25 @@
   border-style: solid;
   border-width: 1px;
   box-shadow: inset 0 0 10px #820839;
-  box-shadow: inset 0 0 10px #820839;
-  box-shadow: inset 0 0 10px #820839;
-
+  // box-shadow: inset 0 0 10px #820839;
+  // box-shadow: inset 0 0 10px #820839;
 }
 
 .icon-background {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: auto;
-  background-color: rgba(30, 30, 30, 0.7);
+  padding: 40px 0px;
   height: 20px;
-  border-radius: 10px 10px 10px 10px;
   width: 260px;
+  background-color: rgba(30, 30, 30, 0.7);
   border-style: solid;
   border-color: #1E1E1E;
   border-width: 2px;
+  border-radius: 10px 10px 10px 10px;
   border-opacity: 0.7;
   border-bottom-radius: 5px;
-  padding-top: 35px;
-  padding-bottom: 40px;
- display: flex;
- align-items: center;
- justify-content: center;
 }
 
 .inline {
@@ -71,14 +69,13 @@
 }
 
 .dropdown-menu {
-background-color: rgba(30, 30, 30, 0.95);
+  background-color: rgba(30, 30, 30, 0.95);
 }
 
 i {
   display:flex;
   content-align: center;
 }
-
 
 a {
   text-align: center;
@@ -91,9 +88,9 @@ h1 {
   color: rgb(255, 255, 255);
 }
 
-
-.container.main-background{
+.main-background {
+  background-color: none;
   background-image: image-url('mainbackground.png');
-  height: 100vh;
   background-repeat: no-repeat;
+  height: 100vh;
 }

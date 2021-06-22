@@ -1,12 +1,16 @@
+:root {
+  --navbar-height: 60px;
+}
+
 .navbar-ember {
   justify-content: space-between;
   background-color: rgba(30, 30, 30, 1);
-  height: 60px;
+  height: var(--navbar-height);
   border-bottom-style: solid;
   border-bottom-width: 100%;
   border-bottom-style: 1px;
   border-bottom-color: #302f2f;
-  z-index: 100;
+  // z-index: 100;
 
 }
 
