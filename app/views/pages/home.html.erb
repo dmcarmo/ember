@@ -1,24 +1,20 @@
 <!-- app/views/pages/home.html.erb -->
-<%= content_for(:navbar_class, "navbar-home") %>
-  <div class="home-body">
-    <div class="row">
-      <div class="col">
-        <div class="banner-content text-center">
-          <br>
-          <br>
-          <h1>ember</h1>
-          <br>
-          <h6>Remember the little things,
-          <br>while focusing on the big.</h6>
-          <br>
-          <%= link_to "Log in", new_user_session_path, class: "btn btn-form" %>
-          <br>
-          <br>
-          <%= link_to "Sign Up", new_user_session_path, class: "btn signup-form" %>
-          </div>
-        </div>
+<%#= content_for(:navbar_class, "navbar-home") %>
+<div class="home-body">
+  <div class="row">
+    <div class="col">
+      <div class="banner-content text-center">
+        <h1>ember</h1>
+        <br>
+        <h6>Remember the little things,
+        <br>while focusing on the big.</h6>
+        <br>
+        <%= link_to "Log in", new_user_session_path, class: "btn btn-form" %>
+        <br>
+        <br>
+        <%= link_to "Sign Up", new_user_session_path, class: "btn signup-form" %>
       </div>
     </div>
   </div>
-
+</div>
 <!-- rgb(173, 29, 99)

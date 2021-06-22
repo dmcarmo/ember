@@ -1,18 +1,14 @@
-<br>
-<br>
 <div class="container">
   <h1>ember</h1>
 </div>
-<br>
-<div class="main-background" style="background-color: none; ">
+<!-- <div class="main-background"> -->
+<div>
   <div class="position">
     <div class="row row-main">
       <li class="action main-button round">
         <%= link_to "Create New Journey", new_journey_path %>
       </li>
     </div>
-    <br>
-    <br>
     <% unless @current_user.journeys.last.nil? %>
       <div class="row row-main">
         <div class="choose_action">
@@ -47,8 +43,6 @@
         </div>
       </div>
     <% end %>
-    <br>
-    <br>
     <div class="row row-main">
       <li class="action main-button round">
         <%= link_to "Journey Albums", journeys_path %>

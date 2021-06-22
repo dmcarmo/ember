@@ -1,49 +1,34 @@
-  <div class="navbar-ember fixed-top" id="navbar">
-    <ul>
-      <li>
-        <%= link_to journeys_path, class: "#{'active' if controller_name == 'journeys' && action_name == 'index' || action_name == 'show'}" do %>
-        <i class="far fa-image" style="font-size: 20px;"></i><% end %></li>
-      <li>
-        <%= link_to journeys_path, data: { toggle: "modal", target: "#exampleModalCenter" } do %><i class="fas fa-search"></i><% end %></li>
-      <li>
-        <%= link_to main_journeys_path, class: "#{'active' if controller_name == 'journeys' && action_name == 'main' || action_name == 'new'}" do %><i class="fab fa-gripfire" style="font-size: 23px;"></i><% end %></li>
-      <li>
-        <%= link_to map_journeys_path, class: "#{'active' if controller_name == 'journeys' && action_name == 'map'}" do %><i class="fas fa-globe-europe"></i><% end %></li>
-
-      <li class="nav-item dropdown <%= 'active' if devise_controller? %>">
-        <%= icon('fas', 'cog', class: "avatar", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false) %>
-          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-            <%= link_to "Edit user", edit_user_registration_path, class: "dropdown-item" %>
-            <%= link_to "Change settings", edit_settings_path, class: "dropdown-item" %>
-            <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
-          </div>
-        </li>
-    </ul>
-  </div>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <% if user_signed_in? %>
-        <li class="nav-item active">
-          <%= link_to "Home", "#", class: "nav-link" %>
-        </li>
-        <li class="nav-item">
-          <%= link_to "Messages", "#", class: "nav-link" %>
-        </li>
-        <li class="nav-item dropdown">
-          <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-            <%= link_to "Edit user", edit_user_registration_path, class: "dropdown-item" %>
-            <%= link_to "Change settings", edit_settings_path, class: "dropdown-item" %>
-            <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
-          </div>
-        </li>
-      <% else %>
-        <li class="nav-item">
-          <%= link_to "Login", new_user_session_path, class: "nav-link" %>
-        </li>
+<div class="navbar-ember fixed-top" id="navbar">
+  <ul>
+    <li>
+      <%= link_to journeys_path, class: "#{'active' if controller_name == 'journeys' && action_name == 'index' || action_name == 'show'}" do %>
+        <i class="far fa-image" style="font-size: 20px;"></i>
       <% end %>
-    </ul>
-  </div>
+    </li>
+    <li>
+      <%= link_to journeys_path, data: { toggle: "modal", target: "#exampleModalCenter" } do %>
+        <i class="fas fa-search"></i>
+      <% end %>
+    </li>
+    <li>
+      <%= link_to main_journeys_path, class: "#{'active' if controller_name == 'journeys' && action_name == 'main' || action_name == 'new'}" do %>
+        <i class="fab fa-gripfire" style="font-size: 23px;"></i>
+      <% end %>
+    </li>
+    <li>
+      <%= link_to map_journeys_path, class: "#{'active' if controller_name == 'journeys' && action_name == 'map'}" do %>
+        <i class="fas fa-globe-europe"></i>
+      <% end %>
+    </li>
+    <li class="nav-item dropdown <%= 'active' if devise_controller? %>">
+      <%= icon('fas', 'cog', class: "avatar", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false) %>
+      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+        <%= link_to "Edit user", edit_user_registration_path, class: "dropdown-item" %>
+        <%= link_to "Change settings", edit_settings_path, class: "dropdown-item" %>
+        <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+      </div>
+    </li>
+  </ul>
+</div>
 
- <%= render "shared/search_modal" %>
+<%= render "shared/search_modal" %>

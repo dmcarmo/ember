@@ -1,10 +1,10 @@
-
-<br>
 <div class="journeys-body">
+  <div id="title">
+    <h5>Journeys</h5>
+  </div>
   <div class="row">
-    <div class="col-12 col-sm-6">
-      <h5>Journeys</h5>
-      <% @journeys.each do |journey| %>
+    <% @journeys.each do |journey| %>
+      <div class="col-10 col-md-5 col-lg-4">
         <div class="card">
           <%= link_to journey_path(journey) do %>
             <div class="card-body">
@@ -21,7 +21,7 @@
             <% end %>
           </div>
         </div>
-      <% end %>
-    </div>
+      </div>
+    <% end %>
   </div>
 </div>

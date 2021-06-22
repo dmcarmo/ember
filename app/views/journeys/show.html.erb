@@ -1,11 +1,7 @@
-<br>
-<br>
-<br>
-<div class="container">
-  <div class="show-background">
-  <h4><%= @journey.title %> <span style = "display: block;"> <%= time_ago_in_words @journey.start_date %> ago </h4>
+<div class="container show-background">
+  <h4><%= @journey.title %> <span style = "display: block;"> <%= time_ago_in_words @journey.start_date %> ago</h4>
   <div class="row">
-    <div class="col-12 card-boarders">
+    <div class="col-12 card-borders">
       <% @journey.items.each do |item| %>
         <%= render "journeys/journey_modal", item: item %>
         <%= render "items/tags_modal_form", item: item %>
@@ -19,7 +15,6 @@
             <% end %>
           </div>
           <div data-toggle="modal" data-target="#exampleModalCenter<%= item.id %>">
-
             <% if item.type == "Picture" %>
               <%= cl_image_tag item.photo.key, transformation: [{quality: "auto"}], class: "photo" %>
             <% elsif item.type == "Video" %>
@@ -32,18 +27,11 @@
               </div>
             <% end %>
           </div>
-          <br>
         </div>
       <% end %>
-      <br>
-      <br>
-      <div class="btn btn-form" style="padding-left: 15px;">
+      <div class="btn btn-form">
         <%= link_to "Go back", journeys_path %>
       </div>
     </div>
   </div>
-  <br>
-  <br>
-  </div>
 </div>
-
