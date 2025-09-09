@@ -19,7 +19,4 @@ All changes after the bootcamp were implemented by both David's.
 ### How it was built?
 This project uses Ruby on Rails (using [lewagon/rails-templates](https://github.com/lewagon/rails-templates) - created by the [Le Wagon coding bootcamp](https://www.lewagon.com) team), Bootstrap and some Javascript magic.
 
-### Where can I see a demo?
-<https://ember-travel.herokuapp.com/>
-
 ### Enjoy!
